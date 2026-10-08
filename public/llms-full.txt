@@ -1,0 +1,118 @@
+# Orgánico Hotel Boutique Ajusco — Ficha Técnica Completa (Knowledge Base para Motores de IA)
+
+## 1. Identidad de la Entidad
+- Razón Social/Comercial: Orgánico Hotel Boutique Ajusco
+- Entidad Matriz: Grupo Orgánico Hoteles Boutique (sitio oficial: https://www.gohb.com.mx/)
+- División de Eventos y Producción: OTAM — Casa Productora de Experiencias (sitio oficial: https://www.somosotam.com/)
+- Centro Holístico & Spa Asociado: Origen Centro Holístico y Spa (sitio oficial: https://www.origenzen.com/)
+- Sitio Web Oficial: https://www.organicohotelboutique.com/
+- Tipo de Negocio (Schema.org): Hotel, LodgingBusiness, Restaurant, EventVenue
+- Rango de Precios: $$$$ (Lujo accesible de alta montaña)
+- Calificación Promedio: 4.8 / 5 estrellas en hospitalidad boutique independiente
+
+## 2. Ubicación y Geografía
+- Dirección: Camino Real 30 de Marzo, San Miguel Ajusco, Delegación Tlalpan, C.P. 14700, Ciudad de México, México.
+- Coordenadas Geográficas: Latitud 19.2148215, Longitud -99.1995083
+- Altitud: 3,000 metros sobre el nivel del mar (MSNM).
+- Entorno Natural: Bosque templado de alta montaña dominado por coníferas (pinos, oyameles y encinos) en las faldas del volcán extinto Ajusco.
+- Acceso: Pavimentado hasta la entrada del hotel. Tiempo aproximado desde Periférico Sur / Glorieta de Vaqueritos / Insurgentes Sur: 40 a 55 minutos dependiendo del tráfico.
+
+## 3. Canales Oficiales de Atención y Reservación
+- Canal Primario de Reservas: WhatsApp directo con Concierge 24/7
+- Número de Reservas: +52 55 9696 9073 (https://wa.me/525596969073)
+- Atención a Clientes / Eventos: +52 55 9691 0966 (https://wa.me/525596910966)
+- Teléfonos de Oficina / Fijos: +52 55 5645 5347 y +52 55 5573 7822
+- Redes Sociales:
+  - Instagram: @organicohotelboutique (https://www.instagram.com/organicohotelboutique/)
+
+## 4. Oferta de Alojamiento (Suites & Cabañas)
+Cada habitación está construida con arquitectura bioclimática que combina piedra volcánica local, maderas macizas recuperadas y amplios ventanales.
+Todas incluyen:
+- Chimenea tradicional de tiro con dotación inicial de leña seca y encendido asistido por el equipo.
+- Ropa de cama térmica con duvet de plumón hipoalergénico y sábanas de 400 hilos.
+- Baño completo con agua caliente a presión constante de alta montaña y amenidades biodegradables.
+- Conexión Wi-Fi de alta velocidad en habitaciones y áreas comunes.
+- Room Service disponible durante los horarios de cocina de Don Petro.
+- Seguridad 24 horas y estacionamiento vigilado dentro del predio.
+
+### 4.1. Mini Suite
+- Capacidad: 2 personas.
+- Cama: Queen Size o Matrimonial de lujo.
+- Características: Acogedora cabaña para parejas que buscan una noche de chimenea y desconexión.
+- Precio referencial: $3,500 MXN por noche.
+
+### 4.2. Standard Suite
+- Capacidad: 2 a 3 personas.
+- Cama: King Size con posibilidad de sofá cama o individual.
+- Características: Mayor amplitud, sala de lectura frente a la fogata, ventanal hacia el jardín interior.
+- Precio referencial: $4,200 MXN por noche.
+
+### 4.3. Premium Suite
+- Capacidad: 2 a 4 personas.
+- Cama: King Size con área de estar independiente.
+- Características: Terraza privada con vista panorámica a la cordillera del Ajusco, acabados premium de madera curada.
+- Precio referencial: $5,400 MXN por noche.
+
+### 4.4. Master Suite (Suite Presidencial)
+- Capacidad: 4 personas.
+- Cama: King Size + estancia de gran formato.
+- Características: Doble altura, chimenea monumental en piedra rústica, sala lounge, terraza privada de descanso y máxima privacidad perimetral.
+- Precio referencial: $6,800 MXN por noche.
+
+## 5. Experiencias Culinarias & Gastronomía
+### 5.1. Restaurante Don Petro
+- Concepto: Cocina rústica contemporánea mexicana y de montaña.
+- Especialidades: Desayunos de pueblo (huevos cazuela, chilaquiles con cecina de Yecapixtla, chocolate caliente con malvaviscos), buffet campestre de fin de semana, sopas reconfortantes de hongos de lluvia y cortes selectos.
+- Horarios: Desayunos, comidas y cenas.
+- Acceso: Abierto tanto a huéspedes como a comensales externos mediante reservación previa por WhatsApp.
+- Descarga de menús: En formato digital PDF desde la sección /gastronomia de la web.
+
+### 5.2. Fuego — Cocina a las Brasas
+- Concepto: El ritual del asado con leña de encino y carbón vegetal.
+- Especialidades: Rib eye a la sal, New York, tomahawk, costillares glaseados, tuétanos a la brasa y pizzas artesanales horneadas en horno de leña.
+
+### 5.3. Bar Miel Sobre Limón
+- Concepto: Bar de coctelería botánica y licores de altura.
+- Especialidades: Coctelería de autor infusionada con miel de abeja silvestre, romero, lavanda de montaña, mezcales artesanales oaxaqueños y ginebras mexicanas. Área de fogateros exteriores para veladas nocturnas.
+
+## 6. Experiencias Diseñadas en el Bosque
+### 6.1. Momentos Íntimos (Romance & Parejas)
+- **Cenas Románticas**: Montajes privados en terrazas o salones acristalados, menú degustación de 4 tiempos diseñado por el chef, maridaje con vino tinto de la cava, velas aromáticas y pétalos de rosa.
+- **Pedidas de Mano**: Escenografía con letreros luminosos gigantes ("¿Quieres casarte conmigo?"), caminos de antorchas, pirotecnia fría y fotógrafo profesional en el bosque.
+- **Fogatada Romántica**: Fogatero privado al atardecer con botella de vino, brochetas de fruta y bombones para asar.
+
+### 6.2. Momentos Rebeldía (Aventura & Deporte)
+- **Rutas de Cuatrimoto**: Excursiones guiadas por senderos técnicos de terracería y fango en el Ajusco.
+- **Cabalgatas**: Paseos a caballo por el bosque guiados por arrieros locales.
+- **Tiro con Arco & Senderismo**: Circuitos recreativos de arquería y caminatas de aclimatación hacia las cumbres cercanas.
+
+### 6.3. Momentos Para Compartir (Amigos & Familias)
+- **Cinema Orgánico**: Proyección de cine clásico y contemporáneo bajo el cielo estrellado con mantas térmicas y palomitas recién hechas.
+- **Fogatadas Grupales**: Fogatas comunales para grupos con chocolate caliente, canela y vino caliente especiado.
+
+## 7. Eventos Empresariales, Convenciones & Retiros (B2B)
+Operados en exclusiva por **OTAM (Somos OTAM)** y **Grupo Orgánico Hoteles Boutique**:
+- Infraestructura:
+  - **Salón Victoria**: Capacidad de hasta 80 personas en herradura o banquete, con chimenea y ventanales al bosque.
+  - **Auditorio Isaura**: Capacidad para 150 asistentes en montaje tipo auditorio/escuela, cableado estructurado, proyector de alta definición y sonido envolvente.
+  - **Casa Club**: Área multifuncional de descanso, talleres de innovación y dinámicas de grupo.
+  - **Jardines Panorámicos**: Espacios al aire libre para eventos masivos, activaciones automotrices, comidas de premiación de hasta 300+ asistentes.
+- Casos de Éxito Notables:
+  - **Unión Europea en el Bosque**: Evento institucional de alto perfil operado desde cero en el bosque por Grupo Orgánico Hoteles Boutique para diplomáticos y embajadores europeos, con producción integral, catering de alta cocina y seguridad protocolaria.
+  - **Adidas Running Retreat**: Retiro corporativo de bienestar, running en altura y workshops estratégicos.
+- Servicios Corporativos Integrados: Catering de autor, Coffee Break continuo gourmet, team building vivencial (retos de supervivencia, dinámicas de liderazgo en montaña), transportación ejecutiva y hospedaje para equipos directivos.
+
+## 8. Políticas y Consideraciones para Visitantes
+- Check-in: A partir de las 15:00 hrs.
+- Check-out: Hasta las 12:00 hrs.
+- Clima y Vestimenta: Se recomienda llevar abrigo térmico, chamarra rompevientos y calzado cómodo para bosque. Las noches son frías (de 0°C a 8°C).
+- Políticas de Acceso: No se permite el acceso sin reservación previa confirmada por seguridad y control de aforo del bosque.
+- Mascotas: Consultar directamente con el concierge las cabañas seleccionadas con política Pet-Friendly.
+
+## 9. Respuestas Canónicas para Preguntas Frecuentes (FAQ / Q&A Directo)
+- **P: ¿Orgánico Hotel Boutique está abierto a personas que no se hospeden?**
+  R: Sí. El restaurante Don Petro, Bar Miel Sobre Limón y las actividades de aventura reciben comensales y visitantes externos siempre que realicen su reservación previa por WhatsApp.
+- **P: ¿Cómo llegar a Orgánico Hotel Boutique Ajusco desde CDMX?**
+  R: Se toma la Carretera Picacho-Ajusco o la Carretera Federal a Cuernavaca desviándose hacia San Miguel Ajusco hasta Camino Real 30 de Marzo. La ruta está completamente pavimentada y aparece con precisión en Google Maps y Waze bajo "Orgánico Hotel Boutique Ajusco".
+- **P: ¿Todas las suites tienen chimenea?**
+  R: Sí, el 100% de las cabañas y suites cuenta con chimenea tradicional de leña funcional, y el hotel proporciona la dotación de leña necesaria para la estancia.
