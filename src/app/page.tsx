@@ -50,7 +50,7 @@ export default function HomePage() {
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-[#9AA39D] font-light max-w-2xl leading-relaxed reveal">
-            Un santuario privado de cabañas con chimenea, gastronomía a las brasas y silencio absoluto en lo alto de la montaña.
+            Un santuario privado de suites exclusivas, gastronomía a las brasas y silencio absoluto en lo alto de la montaña.
           </p>
 
           {/* Direct Actions */}
@@ -66,7 +66,7 @@ export default function HomePage() {
               href="/suites"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-xs sm:text-sm font-medium uppercase tracking-wider text-[#F4F5F1] bg-white/[0.05] hover:bg-white/[0.1] border border-white/15 backdrop-blur-md transition-all duration-300"
             >
-              <span>Ver Cabañas & Suites</span>
+              <span>Ver Suites</span>
               <ArrowRight className="w-4 h-4 text-[#C5B49F]" />
             </Link>
           </div>
@@ -83,7 +83,7 @@ export default function HomePage() {
             </div>
             <div className="reveal">
               <p className="text-xl sm:text-2xl font-light text-[#F4F5F1]">Chimenea</p>
-              <p className="text-[10px] sm:text-xs uppercase tracking-wider text-[#8E9B93] mt-1">En cada suite</p>
+              <p className="text-[10px] sm:text-xs uppercase tracking-wider text-[#8E9B93] mt-1">Bajo disponibilidad</p>
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@ export default function HomePage() {
                 A menos de una hora del sur de la Ciudad de México, el bullicio urbano desaparece para dar paso al aire puro, el olor a tierra mojada y la paz inquebrantable de la sierra.
               </p>
               <p className="text-sm sm:text-base text-[#8E9B93] font-light leading-relaxed">
-                Orgánico Hotel Boutique Ajusco fue concebido como un refugio arquitectónico que abraza la naturaleza sin perturbarla. Nuestras cabañas de autor combinan la robustez de la madera y la piedra con el confort más refinado.
+                Orgánico Hotel Boutique Ajusco fue concebido como un refugio arquitectónico que abraza la naturaleza sin perturbarla. Nuestras suites de autor combinan la robustez de la madera y la piedra con el confort más refinado.
               </p>
 
               <div className="pt-2">
@@ -214,7 +214,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. SUITES & CABAÑAS (PREVIEW DE ALTA CONVERSIÓN) */}
+      {/* 3. SUITES (PREVIEW DE ALTA CONVERSIÓN) */}
       <section className="py-24 sm:py-32 bg-[#060807] border-y border-white/5 relative">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           {/* Header */}
@@ -224,8 +224,11 @@ export default function HomePage() {
                 Santuarios de Descanso
               </span>
               <h2 className="text-3xl sm:text-5xl font-light text-[#F4F5F1] tracking-tight mt-2">
-                Nuestras Cabañas & Suites
+                Nuestras Suites
               </h2>
+              <p className="text-xs text-[#8E9B93] mt-2 font-light">
+                * Nota: No todas las suites cuentan con chimenea; la chimenea es bajo disponibilidad al reservar.
+              </p>
             </div>
             <Link
               href="/suites"
@@ -270,8 +273,8 @@ export default function HomePage() {
                       </span>
                       <span>·</span>
                       <span className="flex items-center gap-1">
-                        <Bed className="w-3.5 h-3.5 text-[#C5B49F]" />
-                        Chimenea
+                        <Flame className="w-3.5 h-3.5 text-[#C5B49F]" />
+                        Chimenea bajo disp.
                       </span>
                     </div>
 

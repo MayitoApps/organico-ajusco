@@ -15,8 +15,8 @@ export const FAQS_DATA: FAQItem[] = [
     answer: "Orgánico Hotel Boutique se localiza en Camino Real 30 de Marzo, San Miguel Ajusco, Alcaldía Tlalpan, CDMX, a 3,000 metros de altitud en el bosque del Ajusco. Se llega en aproximadamente 45 a 55 minutos desde el sur de la Ciudad de México por la Carretera Picacho-Ajusco. Toda la ruta de acceso está pavimentada y el hotel cuenta con estacionamiento privado vigilado las 24 horas."
   },
   {
-    question: "¿Todas las cabañas y suites cuentan con chimenea de leña funcional?",
-    answer: "Sí, el 100% de nuestras suites (Mini Suite, Standard Suite, Premium Suite y Master Suite) están equipadas con chimenea tradicional de leña con dotación inicial incluida, encendido asistido por nuestro personal, lencería térmica de plumón y servicio a la habitación (room service)."
+    question: "¿Todas las suites cuentan con chimenea de leña funcional?",
+    answer: "No todas las suites cuentan con chimenea, su asignación es bajo disponibilidad al momento de hacer la reservación. En las suites asignadas con chimenea se incluye dotación inicial de leña, encendido asistido por nuestro personal y servicio a la habitación (room service)."
   },
   {
     question: "¿El restaurante Don Petro y el Bar Miel Sobre Limón están abiertos al público en general?",
@@ -56,7 +56,7 @@ export default function HomeFAQ() {
             Preguntas Frecuentes
           </h2>
           <p className="text-sm sm:text-base text-[#8E9B93] font-light mt-3 leading-relaxed">
-            Todo lo que necesitas saber antes de subir a la montaña, reservar tu cabaña o planear tu experiencia en Orgánico Hotel Boutique Ajusco.
+            Todo lo que necesitas saber antes de subir a la montaña, reservar tu suite o planear tu experiencia en Orgánico Hotel Boutique Ajusco.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export default function HomeFAQ() {
             </p>
           </div>
           <WhatsAppButton
-            message="Hola Orgánico Ajusco, tengo una consulta sobre sus servicios y cabañas."
+            message="Hola Orgánico Ajusco, tengo una consulta sobre sus servicios y suites."
             label="Chatear con Concierge"
             variant="primary"
             size="md"

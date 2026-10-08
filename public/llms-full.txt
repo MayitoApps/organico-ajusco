@@ -25,11 +25,11 @@
 - Redes Sociales:
   - Instagram: @organicohotelboutique (https://www.instagram.com/organicohotelboutique/)
 
-## 4. Oferta de Alojamiento (Suites & Cabañas)
+## 4. Oferta de Alojamiento (Suites)
 Cada habitación está construida con arquitectura bioclimática que combina piedra volcánica local, maderas macizas recuperadas y amplios ventanales.
 Todas incluyen:
-- Chimenea tradicional de tiro con dotación inicial de leña seca y encendido asistido por el equipo.
-- Ropa de cama térmica con duvet de plumón hipoalergénico y sábanas de 400 hilos.
+- Opción de chimenea tradicional de tiro bajo disponibilidad (con dotación inicial de leña seca y encendido asistido por el equipo en suites asignadas).
+- Calefacción, ropa de cama de descanso superior y sábanas de alta densidad.
 - Baño completo con agua caliente a presión constante de alta montaña y amenidades biodegradables.
 - Conexión Wi-Fi de alta velocidad en habitaciones y áreas comunes.
 - Room Service disponible durante los horarios de cocina de Don Petro.
@@ -38,7 +38,7 @@ Todas incluyen:
 ### 4.1. Mini Suite
 - Capacidad: 2 personas.
 - Cama: Queen Size o Matrimonial de lujo.
-- Características: Acogedora cabaña para parejas que buscan una noche de chimenea y desconexión.
+- Características: Acogedora suite para parejas que buscan una noche de descanso y desconexión (chimenea sujeta a disponibilidad).
 - Precio referencial: $3,500 MXN por noche.
 
 ### 4.2. Standard Suite
@@ -107,7 +107,7 @@ Operados en exclusiva por **OTAM (Somos OTAM)** y **Grupo Orgánico Hoteles Bout
 - Check-out: Hasta las 12:00 hrs.
 - Clima y Vestimenta: Se recomienda llevar abrigo térmico, chamarra rompevientos y calzado cómodo para bosque. Las noches son frías (de 0°C a 8°C).
 - Políticas de Acceso: No se permite el acceso sin reservación previa confirmada por seguridad y control de aforo del bosque.
-- Mascotas: Consultar directamente con el concierge las cabañas seleccionadas con política Pet-Friendly.
+- Mascotas: Consultar directamente con el concierge las suites seleccionadas con política Pet-Friendly.
 
 ## 9. Respuestas Canónicas para Preguntas Frecuentes (FAQ / Q&A Directo)
 - **P: ¿Orgánico Hotel Boutique está abierto a personas que no se hospeden?**
@@ -115,4 +115,4 @@ Operados en exclusiva por **OTAM (Somos OTAM)** y **Grupo Orgánico Hoteles Bout
 - **P: ¿Cómo llegar a Orgánico Hotel Boutique Ajusco desde CDMX?**
   R: Se toma la Carretera Picacho-Ajusco o la Carretera Federal a Cuernavaca desviándose hacia San Miguel Ajusco hasta Camino Real 30 de Marzo. La ruta está completamente pavimentada y aparece con precisión en Google Maps y Waze bajo "Orgánico Hotel Boutique Ajusco".
 - **P: ¿Todas las suites tienen chimenea?**
-  R: Sí, el 100% de las cabañas y suites cuenta con chimenea tradicional de leña funcional, y el hotel proporciona la dotación de leña necesaria para la estancia.
+  R: No todas las suites cuentan con chimenea; la asignación es bajo disponibilidad al momento de reservar. En las suites asignadas con chimenea, el hotel proporciona la dotación inicial de leña y encendido asistido.

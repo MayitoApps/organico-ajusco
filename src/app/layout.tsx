@@ -29,11 +29,11 @@ export const metadata: Metadata = {
     default: "Orgánico Hotel Boutique Ajusco | Hotel de Lujo en la Montaña, CDMX",
     template: "%s | Orgánico Hotel Boutique Ajusco"
   },
-  description: "Descubre Orgánico Hotel Boutique Ajusco a 3,000 msnm en el bosque del Ajusco, CDMX. Cabañas de lujo con chimenea, cocina de autor Don Petro, bar de mixología, spa holístico y privacidad total.",
+  description: "Descubre Orgánico Hotel Boutique Ajusco a 3,000 msnm en el bosque del Ajusco, CDMX. Suites de lujo con opción de chimenea bajo disponibilidad, cocina de autor Don Petro, bar de mixología, spa holístico y privacidad total.",
   keywords: [
     "Orgánico Hotel Boutique Ajusco",
     "Hotel Ajusco",
-    "Cabañas de lujo CDMX",
+    "Suites de lujo CDMX",
     "Hotel boutique Ajusco",
     "Cenas románticas Ajusco",
     "Pedidas de mano Ajusco",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     url: "https://www.organicohotelboutique.com",
     siteName: "Orgánico Hotel Boutique Ajusco",
     title: "Orgánico Hotel Boutique Ajusco | Refugio de Lujo en la Montaña, CDMX",
-    description: "Así se siente el Bosque, Así se siente Orgánico Ajusco. Cabañas privadas de alta montaña con chimenea, gastronomía de autor y desconexión absoluta.",
+    description: "Así se siente el Bosque, Así se siente Orgánico Ajusco. Suites privadas de alta montaña con opción de chimenea bajo disponibilidad, gastronomía de autor y desconexión absoluta.",
     images: [
       {
         url: "/images/hero/hero-montana.webp",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Orgánico Hotel Boutique Ajusco | Refugio en el Bosque, CDMX",
-    description: "Así se siente el Bosque, Así se siente Orgánico Ajusco. Cabañas privadas con chimenea y alta gastronomía a 3,000 msnm.",
+    description: "Así se siente el Bosque, Así se siente Orgánico Ajusco. Suites privadas de montaña y alta gastronomía a 3,000 msnm.",
     images: ["/images/hero/hero-montana.webp"]
   },
   alternates: {
@@ -99,7 +99,7 @@ const jsonLd = {
       "@id": "https://www.organicohotelboutique.com/#hotel",
       "name": "Orgánico Hotel Boutique Ajusco",
       "alternateName": ["Orgánico Ajusco", "Organico Hotel Boutique"],
-      "description": "Hotel boutique y refugio de lujo a 3,000 msnm en el bosque del Ajusco, Ciudad de México. Cabañas privadas con chimenea tradicional, cocina de autor Don Petro, bar de mixología botánica, spa holístico y experiencias románticas.",
+      "description": "Hotel boutique y refugio de lujo a 3,000 msnm en el bosque del Ajusco, Ciudad de México. Suites privadas con chimenea bajo disponibilidad, cocina de autor Don Petro, bar de mixología botánica, spa holístico y experiencias románticas.",
       "url": "https://www.organicohotelboutique.com",
       "telephone": ["+52 55 9696 9073", "+52 55 9691 0966", "+52 55 5645 5347", "+52 55 5573 7822"],
       "priceRange": "$$$$",
@@ -130,7 +130,7 @@ const jsonLd = {
         "https://www.gohb.com.mx/"
       ],
       "amenityFeature": [
-        { "@type": "LocationFeatureSpecification", "name": "Chimenea de leña en cada habitación", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Chimenea de leña (bajo disponibilidad)", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Restaurante Don Petro", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Bar Miel Sobre Limón", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Spa Holístico y Temazcal Origen", "value": true },
@@ -179,10 +179,10 @@ const jsonLd = {
         },
         {
           "@type": "Question",
-          "name": "¿Todas las cabañas y suites cuentan con chimenea de leña funcional?",
+          "name": "¿Todas las suites cuentan con chimenea de leña funcional?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, el 100% de nuestras suites (Mini Suite, Standard Suite, Premium Suite y Master Suite) están equipadas con chimenea tradicional de leña con dotación inicial incluida, encendido asistido por nuestro personal, lencería térmica de plumón y servicio a la habitación."
+            "text": "No todas las suites cuentan con chimenea, su asignación es bajo disponibilidad al momento de reservar. Las suites asignadas con chimenea incluyen dotación inicial de leña, encendido asistido por nuestro personal y servicio a la habitación."
           }
         },
         {

@@ -7,8 +7,8 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { SUITES_DATA } from '@/data/hotelData';
 
 export const metadata: Metadata = {
-  title: "Suites & Cabañas de Lujo en el Bosque",
-  description: "Conoce nuestras 4 categorías de cabañas y suites en el Ajusco: Mini Suite, Standard Suite, Premium Suite y Master Suite. Todas con chimenea y vistas panorámicas a 3,000 msnm.",
+  title: "Suites de Lujo en el Bosque",
+  description: "Conoce nuestras 4 categorías de suites en el Ajusco: Mini Suite, Standard Suite, Premium Suite y Master Suite. Chimenea bajo disponibilidad y vistas panorámicas a 3,000 msnm.",
 };
 
 export default function SuitesPage() {
@@ -17,7 +17,7 @@ export default function SuitesPage() {
       {/* 1. Header */}
       <PageHeader
         title="Santuarios de Descanso en la Montaña"
-        subtitle="Cada cabaña ha sido diseñada para honrar el silencio del Ajusco, integrando maderas nobles, chimeneas tradicionales y vistas al bosque de coníferas."
+        subtitle="Cada suite ha sido diseñada para honrar el silencio del Ajusco, integrando maderas nobles, chimenea (bajo disponibilidad) y vistas al bosque de coníferas."
         tag="Hospedaje de Autor"
         imageSrc="/images/suites/master-suite-1.webp"
         breadcrumb="Suites"
@@ -28,22 +28,22 @@ export default function SuitesPage() {
         <div className="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center reveal-stagger">
           <div className="p-4 reveal">
             <Flame className="w-6 h-6 text-[#C5B49F] mx-auto mb-2" />
-            <h4 className="text-xs uppercase tracking-wider font-semibold text-[#F4F5F1]">Chimenea Propia</h4>
-            <p className="text-[11px] text-[#8E9B93] mt-1">Con dotación de leña en cada habitación</p>
+            <h4 className="text-xs uppercase tracking-wider font-semibold text-[#F4F5F1]">Chimenea</h4>
+            <p className="text-[11px] text-[#8E9B93] mt-1">Bajo disponibilidad al reservar</p>
           </div>
           <div className="p-4 reveal">
             <Sparkles className="w-6 h-6 text-[#C5B49F] mx-auto mb-2" />
-            <h4 className="text-xs uppercase tracking-wider font-semibold text-[#F4F5F1]">Lencería Térmica</h4>
-            <p className="text-[11px] text-[#8E9B93] mt-1">Plumón de alta densidad para el frío nocturno</p>
+            <h4 className="text-xs uppercase tracking-wider font-semibold text-[#F4F5F1]">Calefacción</h4>
+            <p className="text-[11px] text-[#8E9B93] mt-1">Ambiente cálido y acogedor en la montaña</p>
           </div>
           <div className="p-4 reveal">
             <Users className="w-6 h-6 text-[#C5B49F] mx-auto mb-2" />
             <h4 className="text-xs uppercase tracking-wider font-semibold text-[#F4F5F1]">Privacidad Total</h4>
-            <p className="text-[11px] text-[#8E9B93] mt-1">Cabañas independientes distribuidas en el bosque</p>
+            <p className="text-[11px] text-[#8E9B93] mt-1">Suites independientes distribuidas en el bosque</p>
           </div>
           <div className="p-4 reveal">
             <ShieldCheck className="w-6 h-6 text-[#C5B49F] mx-auto mb-2" />
-            <h4 className="text-xs uppercase tracking-wider font-semibold text-[#F4F5F1]">Servicio a la Cabaña</h4>
+            <h4 className="text-xs uppercase tracking-wider font-semibold text-[#F4F5F1]">Servicio a la Suite</h4>
             <p className="text-[11px] text-[#8E9B93] mt-1">Room service y asistencia de concierge</p>
           </div>
         </div>
@@ -51,6 +51,21 @@ export default function SuitesPage() {
 
       {/* 3. Detailed Suites List */}
       <section className="py-16 sm:py-24">
+        {/* Availability Banner */}
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 mb-10">
+          <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.02] border border-[#C5B49F]/30 flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4 text-center sm:text-left">
+            <Flame className="w-5 h-5 text-[#C5B49F] shrink-0 mt-0.5" />
+            <div>
+              <h5 className="text-xs uppercase tracking-wider font-semibold text-[#F4F5F1]">
+                Información importante sobre chimeneas
+              </h5>
+              <p className="text-xs text-[#8E9B93] font-light mt-1">
+                No todas las suites cuentan con chimenea; la asignación de suite con chimenea está sujeta a disponibilidad al momento de reservar. Te sugerimos confirmar tu solicitud directamente con nuestro concierge vía WhatsApp.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Quick Selection Pill Bar */}
         <div className="max-w-7xl mx-auto px-5 sm:px-8 mb-16">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 reveal-stagger">
@@ -214,7 +229,7 @@ export default function SuitesPage() {
             Tu estancia a 3,000 metros sobre el nivel del mar
           </h3>
           <p className="text-xs sm:text-sm text-[#8E9B93] leading-relaxed">
-            Las noches en el Ajusco son frías y despejadas. Todas las suites cuentan con leña preparada y plumones térmicos. Te sugerimos traer calzado cómodo para bosque y abrigo abrigador para disfrutar de las terrazas al atardecer.
+            Las noches en el Ajusco son frías y despejadas. Nuestras suites cuentan con calefacción y chimenea sujeta a disponibilidad previa (con dotación de leña incluida en suites asignadas). Te sugerimos traer calzado cómodo para bosque y abrigo abrigador para disfrutar de las terrazas al atardecer.
           </p>
           <div className="pt-2">
             <WhatsAppButton

@@ -38,7 +38,7 @@ export default function NosotrosPage() {
               </div>
 
               <p className="text-sm text-[#8E9B93] font-light leading-relaxed">
-                Orgánico Hotel Boutique Ajusco es el resultado de una visión audaz: transformar la ladera montañosa del Ajusco en un destino de lujo sin alterar la esencia agreste del ecosistema. Cada cabaña, terraza y sendero fue trazado respetando los árboles centenarios y la topografía volcánica.
+                Orgánico Hotel Boutique Ajusco es el resultado de una visión audaz: transformar la ladera montañosa del Ajusco en un destino de lujo sin alterar la esencia agreste del ecosistema. Cada suite, terraza y sendero fue trazado respetando los árboles centenarios y la topografía volcánica.
               </p>
 
               <p className="text-sm text-[#8E9B93] font-light leading-relaxed">
@@ -70,7 +70,7 @@ export default function NosotrosPage() {
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden card-luxury mt-8 reveal">
                 <Image
                   src="/images/hero/hero-dron-bosque.webp"
-                  alt="Vista aérea del bosque y cabañas"
+                  alt="Vista aérea del bosque y suites"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 50vw, 30vw"

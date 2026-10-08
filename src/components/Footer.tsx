@@ -31,7 +31,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm font-light text-[#8E9B93] leading-relaxed max-w-sm">
-              Refugio de montaña de alta gama en el Ajusco, Ciudad de México. Silencio, coníferas, cabañas de autor, cocina al fuego y privacidad total a 3,000 metros de altitud.
+              Refugio de montaña de alta gama en el Ajusco, Ciudad de México. Silencio, coníferas, suites de autor, cocina al fuego y privacidad total a 3,000 metros de altitud.
             </p>
             <p className="text-xs uppercase tracking-[0.25em] text-[#C5B49F] font-medium">
               &ldquo;{HOTEL_INFO.slogan}&rdquo;
@@ -46,7 +46,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3 text-sm text-[#8E9B93]">
               <li>
                 <Link href="/suites" className="hover:text-[#C5B49F] transition-colors">
-                  Suites & Cabañas
+                  Suites
                 </Link>
               </li>
               <li>
