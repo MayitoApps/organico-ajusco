@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
-import { HOTEL_INFO } from '@/data/hotelData';
+import { HOTEL_INFO, createWhatsAppUrl } from '@/data/hotelData';
 
 const NAV_LINKS = [
   { name: 'Inicio', href: '/' },
@@ -42,13 +42,13 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
             ? 'glass-nav py-3 shadow-2xl'
-            : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5'
+            : 'bg-gradient-to-b from-black/85 via-black/45 to-transparent py-5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 relative flex items-center justify-between">
-          {/* Left Column: Logo */}
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 relative flex items-center justify-between">
+          {/* Left Column: Logo placed distinctly to the left */}
           <div className="flex-1 flex items-center justify-start">
-            <Link href="/" className="group flex items-center gap-3 relative z-10">
+            <Link href="/" className="group flex items-center gap-3 relative z-10 -ml-1 sm:ml-0">
               <Image
                 src={HOTEL_INFO.logos.white}
                 alt="Orgánico Hotel Boutique Ajusco"
@@ -62,14 +62,14 @@ export default function Navbar() {
           </div>
 
           {/* Center Column: Mathematically Centered Desktop Navigation */}
-          <nav className="hidden lg:flex items-center justify-center gap-3.5 xl:gap-6 shrink-0">
+          <nav className="hidden lg:flex items-center justify-center gap-2.5 xl:gap-5 2xl:gap-6 shrink-0">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-[10.5px] xl:text-xs uppercase tracking-[0.14em] xl:tracking-[0.18em] font-medium transition-colors relative py-1 ${
+                  className={`text-[10px] xl:text-[11.5px] uppercase tracking-[0.12em] xl:tracking-[0.16em] font-medium transition-colors relative py-1 ${
                     isActive
                       ? 'text-[#C5B49F]'
                       : 'text-[#F4F5F1]/80 hover:text-[#F4F5F1]'
@@ -84,8 +84,18 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right Column: Symmetrical Balancer on Desktop & Mobile Hamburger Toggle */}
-          <div className="flex-1 flex items-center justify-end">
+          {/* Right Column: Symmetrical Balancer with subtle Reservar CTA on Desktop & Mobile Hamburger */}
+          <div className="flex-1 flex items-center justify-end gap-3 sm:gap-4">
+            <a
+              href={createWhatsAppUrl("Hola Orgánico Ajusco, me gustaría consultar disponibilidad para reservar una estancia.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden lg:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-[#C5B49F]/30 bg-[#C5B49F]/10 hover:bg-[#C5B49F] text-[#F4F5F1] hover:text-[#0A0D0C] text-[10.5px] uppercase tracking-[0.16em] font-medium transition-all duration-300 shadow-sm hover:shadow-[0_4px_16px_rgba(197,180,159,0.25)]"
+            >
+              <span>Reservar</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2.5 rounded-lg text-[#F4F5F1] hover:bg-white/10 transition-colors focus:outline-none"

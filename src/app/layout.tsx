@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans, Cinzel } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ScrollObserver from "@/components/ScrollObserver";
+import DiaDeMuertosPopup from "@/components/DiaDeMuertosPopup";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { HOTEL_INFO } from "@/data/hotelData";
@@ -20,6 +21,13 @@ const fontSans = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
+  display: "swap",
+});
+
+const fontCinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -238,7 +246,7 @@ export default function RootLayout({
     <html
       lang="es-MX"
       data-scroll-behavior="smooth"
-      className={`${fontOutfit.variable} ${fontSans.variable} h-full antialiased dark`}
+      className={`${fontOutfit.variable} ${fontSans.variable} ${fontCinzel.variable} h-full antialiased dark`}
     >
       <head>
         <script
@@ -252,6 +260,7 @@ export default function RootLayout({
         <main className="flex-1 w-full">{children}</main>
         <Footer />
         <FloatingWhatsApp />
+        <DiaDeMuertosPopup />
         <Analytics />
         <SpeedInsights />
       </body>

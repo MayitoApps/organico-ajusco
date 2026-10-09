@@ -38,6 +38,10 @@ body {
   color: #0A0D0C;
 }
 
+.font-cinzel {
+  font-family: var(--font-cinzel), 'Cinzel', Georgia, serif;
+}
+
 /* Custom subtle scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
@@ -55,6 +59,22 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #C5B49F;
+}
+
+/* Custom amber scrollbar for Día de Muertos popup */
+.gohb-custom-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.gohb-custom-scroll::-webkit-scrollbar-track {
+  background: rgba(26, 18, 14, 0.6);
+  border-radius: 9999px;
+}
+.gohb-custom-scroll::-webkit-scrollbar-thumb {
+  background: #D9822B;
+  border-radius: 9999px;
+}
+.gohb-custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #F59E42;
 }
 
 /* Glassmorphism & Micro-borders */
