@@ -19,12 +19,9 @@ export async function POST(request: Request) {
       website_hp // Honeypot antispam
     } = body;
 
-    // 1. Antispam Honeypot check: si un bot llenó el campo oculto, simular éxito
+    // 1. Antispam Honeypot: advertencia si viene lleno pero sin descartar el correo (evita falsos positivos de autofill)
     if (website_hp) {
-      return NextResponse.json(
-        { success: true, message: 'Mensaje procesado correctamente.' },
-        { status: 200 }
-      );
+      console.warn('[Honeypot Warning]: website_hp estaba lleno pero se procesará el correo de:', email);
     }
 
     // 2. Validaciones básicas

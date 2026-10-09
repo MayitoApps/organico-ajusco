@@ -187,20 +187,6 @@ export default function ContactForm() {
               </div>
             )}
 
-            {/* Honeypot Hidden Input (Antispam) */}
-            <div className="hidden" aria-hidden="true">
-              <label htmlFor="website_hp">No llenar este campo</label>
-              <input
-                type="text"
-                id="website_hp"
-                name="website_hp"
-                value={formData.website_hp}
-                onChange={handleChange}
-                tabIndex={-1}
-                autoComplete="off"
-              />
-            </div>
-
             {/* Form Inputs Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {/* Nombre */}
