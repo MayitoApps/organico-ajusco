@@ -135,12 +135,16 @@ export default function DiaDeMuertosPopup({ forceOpen = false }: DiaDeMuertosPop
   return (
     <div
       id="gohb-modal-ajusco"
-      className={`fixed inset-0 z-[99999999] flex items-center justify-center p-4 sm:p-6 transition-all duration-350 ease-out ${
+      className={`fixed inset-0 z-[99999999] flex items-center justify-center p-4 sm:p-6 overflow-hidden transition-all duration-350 ease-out ${
         isAnimating ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}
       role="dialog"
       aria-modal="true"
       aria-label="Día de Muertos 2026 - Orgánico Hotel Boutique Ajusco"
+      style={{
+        touchAction: 'pan-y',
+        overscrollBehavior: 'contain',
+      }}
     >
       {/* Backdrop with rich blur & subtle darkening */}
       <div
@@ -152,25 +156,28 @@ export default function DiaDeMuertosPopup({ forceOpen = false }: DiaDeMuertosPop
 
       {/* Luxury Modal Card */}
       <div
-        className={`relative z-10 w-full max-w-[530px] max-h-[90vh] overflow-y-auto gohb-custom-scroll rounded-2xl sm:rounded-3xl bg-[#16110E] border border-[#D9822B]/40 p-6 sm:p-8 text-[#F2E8DC] shadow-[0_25px_70px_rgba(0,0,0,0.95),0_0_50px_rgba(217,130,43,0.22)] transition-all duration-350 ease-out ${
+        className={`relative z-10 w-full max-w-[530px] max-h-[90vh] overflow-y-auto overflow-x-hidden gohb-custom-scroll rounded-2xl sm:rounded-3xl bg-[#16110E] border border-[#D9822B]/40 p-6 sm:p-8 text-[#F2E8DC] shadow-[0_25px_70px_rgba(0,0,0,0.95),0_0_50px_rgba(217,130,43,0.22)] transition-all duration-350 ease-out ${
           isAnimating ? 'translate-y-0 scale-100 opacity-100' : 'translate-y-6 scale-95 opacity-0'
         }`}
         style={{
           scrollbarWidth: 'thin',
           scrollbarColor: '#D9822B #1E1713',
+          touchAction: 'pan-y',
+          overscrollBehavior: 'contain',
         }}
       >
-        {/* Decorative warm aura glow at top of card */}
-        <div
-          className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-36 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#D9822B]/25 via-[#B84A29]/10 to-transparent rounded-t-3xl"
-          aria-hidden="true"
-        />
+        {/* Background glow container strictly clipped to card boundaries */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl sm:rounded-3xl" aria-hidden="true">
+          {/* Decorative warm aura glow at top of card */}
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-4/5 h-36 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#D9822B]/25 via-[#B84A29]/10 to-transparent rounded-t-3xl"
+          />
 
-        {/* Ambient warm corner candle glow */}
-        <div
-          className="pointer-events-none absolute -bottom-10 -right-10 w-44 h-44 bg-[#D9822B]/10 rounded-full blur-3xl"
-          aria-hidden="true"
-        />
+          {/* Ambient warm corner candle glow */}
+          <div
+            className="absolute -bottom-10 -right-10 w-44 h-44 bg-[#D9822B]/10 rounded-full blur-3xl"
+          />
+        </div>
 
         {/* Close Button */}
         <button
@@ -206,7 +213,7 @@ export default function DiaDeMuertosPopup({ forceOpen = false }: DiaDeMuertosPop
           {EVENTS.map((event) => (
             <div
               key={event.id}
-              className="group relative rounded-xl bg-[#201813]/75 hover:bg-[#2A2019]/95 border border-[#B84A29]/28 hover:border-[#D9822B]/60 border-l-[3px] border-l-[#D9822B] p-3.5 sm:p-4 text-left transition-all duration-300 hover:translate-x-1 hover:shadow-[0_4px_20px_rgba(217,130,43,0.14)]"
+              className="group relative rounded-xl bg-[#201813]/75 hover:bg-[#2A2019]/95 border border-[#B84A29]/28 hover:border-[#D9822B]/60 border-l-[3px] border-l-[#D9822B] p-3.5 sm:p-4 text-left transition-all duration-200 hover:shadow-[0_4px_20px_rgba(217,130,43,0.14)]"
             >
               {/* Event Tag / Date */}
               <div className="text-[10px] font-bold tracking-[0.1em] text-[#E58A3C] uppercase mb-1">

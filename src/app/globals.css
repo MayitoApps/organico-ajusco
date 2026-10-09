@@ -77,6 +77,20 @@ body {
   background: #F59E42;
 }
 
+/* Día de Muertos popup strict horizontal lock & vertical-only scroll */
+#gohb-modal-ajusco {
+  overflow-x: hidden !important;
+  touch-action: pan-y !important;
+}
+
+#gohb-modal-ajusco .gohb-custom-scroll {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  overscroll-behavior-x: none !important;
+  overscroll-behavior-y: contain !important;
+  touch-action: pan-y !important;
+}
+
 /* Glassmorphism & Micro-borders */
 .glass-panel {
   background: rgba(18, 23, 20, 0.75);
