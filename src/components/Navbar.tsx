@@ -15,6 +15,7 @@ const NAV_LINKS = [
   { name: 'Espacios', href: '/espacios' },
   { name: 'Eventos Empresariales', href: '/eventos-empresariales' },
   { name: 'Nosotros', href: '/nosotros' },
+  { name: 'Contacto', href: '/contacto' },
 ];
 
 export default function Navbar() {
@@ -61,14 +62,14 @@ export default function Navbar() {
           </div>
 
           {/* Center Column: Mathematically Centered Desktop Navigation */}
-          <nav className="hidden lg:flex items-center justify-center gap-5 xl:gap-7 shrink-0">
+          <nav className="hidden lg:flex items-center justify-center gap-3.5 xl:gap-6 shrink-0">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-[11px] xl:text-xs uppercase tracking-[0.15em] xl:tracking-[0.18em] font-medium transition-colors relative py-1 ${
+                  className={`text-[10.5px] xl:text-xs uppercase tracking-[0.14em] xl:tracking-[0.18em] font-medium transition-colors relative py-1 ${
                     isActive
                       ? 'text-[#C5B49F]'
                       : 'text-[#F4F5F1]/80 hover:text-[#F4F5F1]'

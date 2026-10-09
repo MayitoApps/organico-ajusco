@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowUpRight, MapPin, Phone, Smartphone } from 'lucide-react';
+import { ArrowUpRight, MapPin, Phone, Smartphone, Mail } from 'lucide-react';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { HOTEL_INFO, createWhatsAppUrl } from '@/data/hotelData';
 
@@ -84,6 +84,11 @@ export default function Footer() {
                   Nuestra Filosofía
                 </Link>
               </li>
+              <li>
+                <Link href="/contacto" className="text-[#C5B49F] hover:text-[#d6c7b4] font-medium transition-colors">
+                  Contacto & Reservaciones
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -149,6 +154,20 @@ export default function Footer() {
                       ))}
                     </div>
                   </div>
+                </div>
+              </li>
+              <li className="flex items-start gap-2.5 pt-1">
+                <Mail className="w-4 h-4 text-[#C5B49F] shrink-0 mt-0.5" />
+                <div>
+                  <span className="block text-xs uppercase tracking-wider text-[#8E9B93] mb-0.5">
+                    Correo de Atención
+                  </span>
+                  <a
+                    href={`mailto:${HOTEL_INFO.contactEmail}`}
+                    className="font-medium text-[#F4F5F1] hover:text-[#C5B49F] transition-colors block text-xs"
+                  >
+                    {HOTEL_INFO.contactEmail}
+                  </a>
                 </div>
               </li>
               <li className="flex items-start gap-2.5 pt-1">

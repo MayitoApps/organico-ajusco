@@ -79,6 +79,7 @@ export const HOTEL_INFO = {
   whatsappNumber: "+52 55 7455 5091",
   whatsappRaw: "525574555091",
   email: "reservaciones@organicohotelboutique.com",
+  contactEmail: "contacto@organicohotelboutique.com",
   socials: {
     facebook: "https://www.facebook.com/OrganicoHotelBoutique/",
     instagram: "https://www.instagram.com/organicohotelboutique/?hl=en"
