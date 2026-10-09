@@ -186,37 +186,63 @@ export async function POST(request: Request) {
 
     if (smtpUser && smtpPass) {
       const isGmail = (process.env.SMTP_SERVICE === 'gmail') || smtpUser.includes('@gmail.com');
+      const cleanPass = smtpPass.trim().replace(/\s+/g, '');
 
       const transporter = isGmail
         ? nodemailer.createTransport({
-            service: 'gmail',
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
             auth: {
-              user: smtpUser,
-              pass: smtpPass
+              user: smtpUser.trim(),
+              pass: cleanPass
             }
           })
         : nodemailer.createTransport({
             host: process.env.SMTP_HOST || 'smtp.gmail.com',
             port: Number(process.env.SMTP_PORT) || 465,
-            secure: process.env.SMTP_SECURE === 'true',
+            secure: process.env.SMTP_SECURE === 'true' || Number(process.env.SMTP_PORT) === 465,
             auth: {
-              user: smtpUser,
-              pass: smtpPass
+              user: smtpUser.trim(),
+              pass: cleanPass
             }
           });
 
-      await transporter.sendMail({
-        from: `"Web Orgánico Ajusco" <${smtpUser}>`,
-        to: recipient,
-        replyTo: cleanEmail,
-        subject: emailSubject,
-        html: emailHtml
-      });
+      try {
+        await transporter.sendMail({
+          from: `"Web Orgánico Ajusco" <${smtpUser.trim()}>`,
+          to: recipient,
+          replyTo: cleanEmail,
+          subject: emailSubject,
+          html: emailHtml
+        });
 
-      return NextResponse.json({
-        success: true,
-        message: '¡Gracias por contactarnos! Tu mensaje ha sido enviado exitosamente.'
-      });
+        return NextResponse.json({
+          success: true,
+          message: '¡Gracias por contactarnos! Tu mensaje ha sido enviado exitosamente.'
+        });
+      } catch (mailError: unknown) {
+        console.error('[Nodemailer Send Error]:', mailError);
+        const errMsg = mailError instanceof Error ? mailError.message : 'Error al conectar con el servidor de correo.';
+        return NextResponse.json(
+          {
+            success: false,
+            error: `No fue posible entregar el correo por Gmail: ${errMsg}. Verifica que la Contraseña de Aplicación de Google sea correcta.`
+          },
+          { status: 500 }
+        );
+      }
+    }
+
+    if (smtpUser && !smtpPass) {
+      console.warn('[Configuración Incompleta]: SMTP_USER está definido pero falta SMTP_PASS en Vercel.');
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'El servicio de correo requiere la Contraseña de Aplicación de Gmail (variable SMTP_PASS en Vercel).'
+        },
+        { status: 500 }
+      );
     }
 
     // 5. Modo de Desarrollo / Fallback Seguro cuando aún no se configuran variables de entorno
