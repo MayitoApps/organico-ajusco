@@ -95,8 +95,14 @@ export const metadata: Metadata = {
     "format-detection": "telephone=no",
   },
   icons: {
-    icon: "/favicon.ico"
-  }
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 const jsonLd = {
