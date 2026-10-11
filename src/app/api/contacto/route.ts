@@ -21,7 +21,6 @@ export async function POST(request: Request) {
       email,
       phone,
       subject = 'Consulta General',
-      date,
       guests,
       message,
       website_hp // Honeypot antispam
@@ -60,7 +59,6 @@ export async function POST(request: Request) {
     const cleanEmail = email.trim();
     const cleanPhone = (phone || 'No especificado').trim();
     const cleanSubject = (subject || 'Consulta General').trim();
-    const cleanDate = (date || 'No especificada').trim();
     const cleanGuests = (guests || 'No especificado').trim();
     const cleanMessage = message.trim();
 
@@ -79,13 +77,13 @@ export async function POST(request: Request) {
 
     const emailSubject = `Orgánico Hotel Boutique Ajusco - ${cleanName}`;
 
-    // Plantilla HTML de lujo 100% Mobile-First Responsive
+    // Plantilla HTML de lujo 100% Mobile-First Responsive (Compatible con Gmail, Apple Mail, Outlook y Android)
     const emailHtml = `
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="x-apple-disable-message-reformatting">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
   <meta name="color-scheme" content="dark only">
@@ -93,7 +91,7 @@ export async function POST(request: Request) {
   <title>Orgánico Hotel Boutique Ajusco - ${cleanName}</title>
   <style>
     :root { color-scheme: dark only; supported-color-schemes: dark only; }
-    body {
+    html, body {
       margin: 0 !important;
       padding: 0 !important;
       background-color: #0A0D0C !important;
@@ -102,158 +100,205 @@ export async function POST(request: Request) {
       -webkit-font-smoothing: antialiased !important;
       -webkit-text-size-adjust: 100% !important;
       -ms-text-size-adjust: 100% !important;
+      width: 100% !important;
     }
-    table, td { border-collapse: collapse !important; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; }
+    table, td {
+      border-collapse: collapse !important;
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
     * { box-sizing: border-box !important; }
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+    u + #body a {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+    #MessageViewBody a {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
     @media only screen and (max-width: 600px) {
-      .email-wrapper { padding: 10px 8px !important; }
-      .email-container { max-width: 100% !important; border-radius: 14px !important; }
-      .email-header { padding: 22px 16px 18px !important; }
-      .brand-title { font-size: 19px !important; letter-spacing: 1.5px !important; }
-      .email-content { padding: 18px 14px 22px !important; }
-      .field-card { padding: 12px 14px !important; margin-bottom: 8px !important; }
-      .field-value { font-size: 14px !important; }
+      .mobile-padding { padding: 12px 6px !important; }
+      .mobile-content { padding: 16px 14px 20px !important; }
+      .mobile-header { padding: 20px 14px 16px !important; }
+      .brand-title { font-size: 17px !important; letter-spacing: 0.8px !important; }
+      .card-item { padding: 11px 13px !important; margin-bottom: 8px !important; }
+      .card-value { font-size: 14px !important; }
       .cta-btn {
         display: block !important;
         width: 100% !important;
-        margin: 8px 0 !important;
-        padding: 14px 16px !important;
+        padding: 14px 12px !important;
         font-size: 12px !important;
         text-align: center !important;
       }
-      .email-footer { padding: 20px 14px !important; font-size: 11px !important; }
+      .mobile-footer { padding: 18px 12px !important; font-size: 11px !important; }
     }
   </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #0A0D0C; color: #F4F5F1; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-  <div class="email-wrapper" style="width: 100%; background-color: #0A0D0C; padding: 30px 12px; box-sizing: border-box;">
-    <div class="email-container" style="max-width: 600px; margin: 0 auto; background-color: #121715; border: 1px solid rgba(197, 180, 159, 0.28); border-radius: 16px; overflow: hidden; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);">
-      
-      <!-- Encabezado con Nombre del Hotel -->
-      <div class="email-header" style="background: linear-gradient(180deg, #18201D 0%, #121715 100%); padding: 28px 20px 22px; text-align: center; border-bottom: 1px solid rgba(197, 180, 159, 0.18);">
-        <h1 class="brand-title" style="margin: 0; font-size: 22px; letter-spacing: 2px; text-transform: uppercase; color: #F4F5F1; font-weight: 500;">
-          Orgánico Hotel Boutique Ajusco
-        </h1>
-      </div>
-
-      <!-- Contenido Principal: Información del Remitente -->
-      <div class="email-content" style="padding: 24px 24px 28px;">
+<body id="body" style="margin: 0; padding: 0; background-color: #0A0D0C; color: #F4F5F1; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <!-- Master Outer Table -->
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed; width: 100%; margin: 0; padding: 0; background-color: #0A0D0C;">
+    <tr>
+      <td align="center" class="mobile-padding" style="padding: 24px 10px; background-color: #0A0D0C;">
         
-        <!-- Ficha 1: Nombre del Remitente -->
-        <div class="field-card" style="background-color: #18221E; border: 1px solid rgba(197, 180, 159, 0.35); border-left: 4px solid #C5B49F; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px;">
-          <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #C5B49F; font-weight: 700; margin-bottom: 3px;">
-            Nombre del Remitente
-          </div>
-          <div class="field-value" style="font-size: 16px; color: #F4F5F1; font-weight: 600; word-break: break-word;">
-            ${cleanName}
-          </div>
-        </div>
+        <!-- Main Email Container -->
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 580px; width: 100%; margin: 0 auto; background-color: #121815; border: 1px solid #2B3830; border-radius: 14px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.6);">
+          
+          <!-- Encabezado Institucional -->
+          <tr>
+            <td class="mobile-header" style="background-color: #18221D; border-bottom: 2px solid #C5B49F; padding: 24px 20px 20px; text-align: center;">
+              <div style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C5B49F; margin-bottom: 6px;">
+                Nueva Consulta · Sitio Web
+              </div>
+              <h1 class="brand-title" style="margin: 0; font-size: 19px; letter-spacing: 1.2px; text-transform: uppercase; color: #F4F5F1; font-weight: 600; line-height: 1.3;">
+                Orgánico Hotel Boutique
+              </h1>
+              <div style="font-size: 11px; color: #8E9B93; margin-top: 4px; letter-spacing: 0.5px;">
+                San Miguel Ajusco, Ciudad de México
+              </div>
+            </td>
+          </tr>
 
-        <!-- Ficha 2: Correo Electrónico -->
-        <div class="field-card" style="background-color: #151C19; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 13px 16px; margin-bottom: 10px;">
-          <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
-            Correo Electrónico
-          </div>
-          <div class="field-value" style="font-size: 15px; word-break: break-word;">
-            <a href="mailto:${cleanEmail}" style="color: #C5B49F; text-decoration: none; font-weight: 500;">
-              ${cleanEmail}
-            </a>
-          </div>
-        </div>
-
-        <!-- Ficha 3: Teléfono / WhatsApp -->
-        <div class="field-card" style="background-color: #151C19; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 13px 16px; margin-bottom: 10px;">
-          <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
-            Teléfono de Contacto
-          </div>
-          <div class="field-value" style="font-size: 15px; color: #F4F5F1; word-break: break-word;">
-            <a href="tel:${cleanPhone}" style="color: #F4F5F1; text-decoration: none; font-weight: 500;">
-              ${cleanPhone}
-            </a>
-            ${
-              waUrl
-                ? '<span style="display: inline-block; margin-left: 8px; font-size: 11px; color: #25D366; font-weight: 600;">(WhatsApp Disponible)</span>'
-                : ''
-            }
-          </div>
-        </div>
-
-        <!-- Ficha 4: Interés o Motivo -->
-        <div class="field-card" style="background-color: #151C19; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 13px 16px; margin-bottom: 10px;">
-          <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
-            Interés o Motivo
-          </div>
-          <div class="field-value" style="font-size: 15px; color: #F4F5F1; font-weight: 500; word-break: break-word;">
-            ${cleanSubject}
-          </div>
-        </div>
-
-        <!-- Ficha 5: Huéspedes / Personas -->
-        ${
-          cleanGuests && cleanGuests !== 'No especificado'
-            ? `<div class="field-card" style="background-color: #151C19; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 13px 16px; margin-bottom: 12px;">
-                <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
-                  Huéspedes / Personas
+          <!-- Contenido Principal -->
+          <tr>
+            <td class="mobile-content" style="padding: 22px 22px 26px;">
+              
+              <!-- Ficha 1: Nombre del Remitente (Destacado) -->
+              <div class="card-item" style="background-color: #19241E; border: 1px solid #2E3E34; border-left: 4px solid #C5B49F; border-radius: 8px; padding: 13px 15px; margin-bottom: 10px;">
+                <div style="font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; color: #C5B49F; font-weight: 700; margin-bottom: 3px;">
+                  Nombre del Remitente
                 </div>
-                <div class="field-value" style="font-size: 14px; color: #F4F5F1; font-weight: 500;">
-                  ${cleanGuests}
+                <div class="card-value" style="font-size: 16px; color: #F4F5F1; font-weight: 600; word-break: break-word; line-height: 1.3;">
+                  ${cleanName}
                 </div>
-              </div>`
-            : ''
-        }
+              </div>
 
-        <!-- Ficha 6: Mensaje o Requerimientos -->
-        <div style="margin-top: 16px; margin-bottom: 22px;">
-          <div style="font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: #C5B49F; font-weight: 600; margin-bottom: 8px;">
-            Mensaje del Cliente
-          </div>
-          <div style="background-color: #0A0D0C; border: 1px solid rgba(197, 180, 159, 0.22); border-left: 3px solid #C5B49F; border-radius: 8px; padding: 16px; font-size: 14px; line-height: 1.6; color: #E8EBE6; white-space: pre-wrap; word-break: break-word;">
-            ${cleanMessage}
-          </div>
-        </div>
+              <!-- Ficha 2: Correo Electrónico -->
+              <div class="card-item" style="background-color: #141C19; border: 1px solid #233028; border-radius: 8px; padding: 12px 15px; margin-bottom: 10px;">
+                <div style="font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
+                  Correo Electrónico
+                </div>
+                <div class="card-value" style="font-size: 14.5px; word-break: break-word;">
+                  <a href="mailto:${cleanEmail}" style="color: #C5B49F; text-decoration: none; font-weight: 600;">
+                    ${cleanEmail}
+                  </a>
+                </div>
+              </div>
 
-        <!-- Botones de Acción Táctiles (Mobile Responsive) -->
-        <div style="margin-top: 26px;">
-          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td align="center" style="padding-bottom: 10px;">
-                <a href="mailto:${cleanEmail}?subject=Re:%20[Org%C3%A1nico%20Ajusco]%20${encodeURIComponent(cleanSubject)}" class="cta-btn" style="display: block; width: 100%; box-sizing: border-box; background-color: #C5B49F; color: #0A0D0C; text-decoration: none; font-size: 12.5px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; padding: 14px 20px; border-radius: 8px; text-align: center;">
-                  ✉ Responder Directo a ${cleanName}
-                </a>
-              </td>
-            </tr>
-            ${
-              waUrl
-                ? `<tr>
-                    <td align="center">
-                      <a href="${waUrl}" target="_blank" class="cta-btn" style="display: block; width: 100%; box-sizing: border-box; background-color: #152219; color: #25D366; text-decoration: none; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; padding: 13px 20px; border-radius: 8px; text-align: center; border: 1px solid #25D366;">
-                        💬 Escribir al Huésped por WhatsApp
+              <!-- Ficha 3: Teléfono / WhatsApp -->
+              <div class="card-item" style="background-color: #141C19; border: 1px solid #233028; border-radius: 8px; padding: 12px 15px; margin-bottom: 10px;">
+                <div style="font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
+                  Teléfono de Contacto
+                </div>
+                <div class="card-value" style="font-size: 14.5px; color: #F4F5F1; word-break: break-word;">
+                  <a href="tel:${cleanPhone}" style="color: #F4F5F1; text-decoration: none; font-weight: 600;">
+                    ${cleanPhone}
+                  </a>
+                  ${
+                    waUrl
+                      ? '<span style="display: inline-block; margin-left: 8px; font-size: 11px; color: #25D366; font-weight: 600;">(WhatsApp Disponible)</span>'
+                      : ''
+                  }
+                </div>
+              </div>
+
+              <!-- Ficha 4: Motivo de Interés -->
+              <div class="card-item" style="background-color: #141C19; border: 1px solid #233028; border-radius: 8px; padding: 12px 15px; margin-bottom: 10px;">
+                <div style="font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
+                  Motivo de Consulta
+                </div>
+                <div class="card-value" style="font-size: 14.5px; color: #F4F5F1; font-weight: 500; word-break: break-word;">
+                  ${cleanSubject}
+                </div>
+              </div>
+
+              <!-- Ficha 5: Huéspedes / Personas (Si está especificado) -->
+              ${
+                cleanGuests && cleanGuests !== 'No especificado'
+                  ? `<div class="card-item" style="background-color: #141C19; border: 1px solid #233028; border-radius: 8px; padding: 12px 15px; margin-bottom: 10px;">
+                      <div style="font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
+                        Huéspedes / Personas
+                      </div>
+                      <div class="card-value" style="font-size: 14px; color: #F4F5F1; font-weight: 500;">
+                        ${cleanGuests}
+                      </div>
+                    </div>`
+                  : ''
+              }
+
+              <!-- Ficha 6: Mensaje del Cliente -->
+              <div style="margin-top: 14px; margin-bottom: 20px;">
+                <div style="font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; color: #C5B49F; font-weight: 700; margin-bottom: 6px;">
+                  Mensaje del Cliente
+                </div>
+                <div style="background-color: #0A0F0D; border: 1px solid #24322A; border-left: 4px solid #C5B49F; border-radius: 8px; padding: 15px 16px; font-size: 14px; line-height: 1.6; color: #E7EBE5; white-space: pre-wrap; word-break: break-word;">
+                  ${cleanMessage}
+                </div>
+              </div>
+
+              <!-- Botones de Acción Táctiles (Mobile First) -->
+              <div style="margin-top: 22px;">
+                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="center" style="padding-bottom: 10px;">
+                      <a href="mailto:${cleanEmail}?subject=Re:%20[Org%C3%A1nico%20Ajusco]%20${encodeURIComponent(cleanSubject)}" class="cta-btn" style="display: block; width: 100%; box-sizing: border-box; background-color: #C5B49F; color: #0A0D0C; text-decoration: none; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 700; padding: 14px 16px; border-radius: 8px; text-align: center;">
+                        ✉ Responder por Correo
                       </a>
                     </td>
-                  </tr>`
-                : ''
-            }
-          </table>
-          <p style="margin: 14px 0 0 0; font-size: 11px; color: #6E7B74; text-align: center; line-height: 1.4;">
-            Al responder desde tu gestor de correo, el remitente ya está preconfigurado como <strong style="color: #C5B49F;">${cleanEmail}</strong>.
-          </p>
-        </div>
+                  </tr>
+                  ${
+                    waUrl
+                      ? `<tr>
+                          <td align="center">
+                            <a href="${waUrl}" target="_blank" class="cta-btn" style="display: block; width: 100%; box-sizing: border-box; background-color: #142219; color: #25D366; text-decoration: none; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600; padding: 13px 16px; border-radius: 8px; text-align: center; border: 1px solid #25D366;">
+                              💬 Escribir por WhatsApp
+                            </a>
+                          </td>
+                        </tr>`
+                      : ''
+                  }
+                </table>
+                <p style="margin: 12px 0 0 0; font-size: 11px; color: #728178; text-align: center; line-height: 1.4;">
+                  Al responder este correo, tu mensaje se dirigirá automáticamente a <strong style="color: #C5B49F;">${cleanEmail}</strong>.
+                </p>
+              </div>
 
-      </div>
+            </td>
+          </tr>
 
-      <!-- Pie de Página Institucional -->
-      <div class="email-footer" style="background-color: #0A0D0C; border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 22px 24px; text-align: center; font-size: 11px; color: #6E7B74; line-height: 1.5;">
-        <p style="margin: 0; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93;">
-          Orgánico Hotel Boutique · Ajusco
-        </p>
-        <p style="margin: 6px 0 0 0;">
-          Recibido el ${timestamp} desde el formulario oficial.<br>
-          Destinatario configurado: ${recipient}
-        </p>
-      </div>
+          <!-- Pie de Página Institucional -->
+          <tr>
+            <td class="mobile-footer" style="background-color: #0A0D0C; border-top: 1px solid #1D2822; padding: 20px 20px; text-align: center; font-size: 11px; color: #728178; line-height: 1.5;">
+              <p style="margin: 0; font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; color: #8E9B93; font-weight: 600;">
+                Orgánico Hotel Boutique · Ajusco
+              </p>
+              <p style="margin: 6px 0 0 0;">
+                Recibido el ${timestamp} desde el sitio oficial.<br>
+                Destinatario configurado: ${recipient}
+              </p>
+            </td>
+          </tr>
 
-    </div>
-  </div>
+        </table>
+
+      </td>
+    </tr>
+  </table>
 </body>
 </html>
 `;
@@ -361,7 +406,7 @@ export async function POST(request: Request) {
     console.log(`De: ${cleanName} <${cleanEmail}>`);
     console.log(`Teléfono: ${cleanPhone}`);
     console.log(`Asunto: ${cleanSubject}`);
-    console.log(`Fecha: ${cleanDate} | Asistentes: ${cleanGuests}`);
+    console.log(`Asistentes: ${cleanGuests}`);
     console.log(`Mensaje: ${cleanMessage}`);
     console.log('----------------------------------------------------');
 

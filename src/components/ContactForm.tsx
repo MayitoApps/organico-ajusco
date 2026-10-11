@@ -9,20 +9,18 @@ import {
   User, 
   Mail, 
   Phone,
-Users, 
+  Users, 
   MessageSquare, 
-  Sparkles,
-  ArrowRight
+  Sparkles
 } from 'lucide-react';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
-import { HOTEL_INFO, createWhatsAppUrl } from '@/data/hotelData';
+import { createWhatsAppUrl } from '@/data/hotelData';
 
 interface FormState {
   name: string;
   email: string;
   phone: string;
   subject: string;
-  date?: string;
   guests: string;
   message: string;
   privacyAccepted: boolean;
@@ -34,7 +32,6 @@ const INITIAL_FORM: FormState = {
   email: '',
   phone: '',
   subject: 'Reservaciones & Hospedaje',
-  date: '',
   guests: '',
   message: '',
   privacyAccepted: true,
@@ -122,25 +119,25 @@ export default function ContactForm() {
       <div className="absolute -top-12 -right-12 w-80 h-80 bg-[#C5B49F]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-[#1B2420]/30 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative rounded-2xl bg-white/[0.02] border border-white/10 p-6 sm:p-10 backdrop-blur-xl shadow-2xl">
+      <div className="relative rounded-2xl bg-white/[0.02] border border-white/10 p-5 sm:p-8 md:p-10 backdrop-blur-xl shadow-2xl">
         {status === 'success' ? (
-          <div className="py-12 px-4 flex flex-col items-center text-center max-w-lg mx-auto">
-            <div className="w-16 h-16 rounded-full bg-[#C5B49F]/10 border border-[#C5B49F]/30 flex items-center justify-center text-[#C5B49F] mb-6">
-              <CheckCircle2 className="w-8 h-8" />
+          <div className="py-10 px-2 sm:px-4 flex flex-col items-center text-center max-w-lg mx-auto">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#C5B49F]/10 border border-[#C5B49F]/30 flex items-center justify-center text-[#C5B49F] mb-5">
+              <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
             </div>
 
-            <span className="text-xs uppercase tracking-[0.25em] text-[#C5B49F] font-semibold mb-2">
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#C5B49F] font-semibold mb-2">
               Mensaje Enviado con Éxito
             </span>
-            <h3 className="text-2xl sm:text-3xl font-light text-[#F4F5F1] mb-4">
+            <h3 className="text-2xl sm:text-3xl font-light text-[#F4F5F1] mb-3">
               Hemos recibido tu solicitud
             </h3>
-            <p className="text-sm font-light text-[#8E9B93] leading-relaxed mb-8">
+            <p className="text-xs sm:text-sm font-light text-[#8E9B93] leading-relaxed mb-6 sm:mb-8">
               Tu mensaje ha sido recibido por nuestro equipo de hospitalidad y reservaciones.
               Uno de nuestros anfitriones se pondrá en contacto contigo a la brevedad posible.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
+            <div className="flex flex-col sm:flex-row items-center gap-3.5 w-full justify-center">
               <a
                 href={quickWaUrl}
                 target="_blank"
@@ -153,17 +150,17 @@ export default function ContactForm() {
 
               <button
                 onClick={handleReset}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/[0.05] border border-white/10 text-xs uppercase tracking-wider text-[#F4F5F1] hover:bg-white/10 transition-colors"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/[0.05] border border-white/10 text-xs uppercase tracking-wider text-[#F4F5F1] hover:bg-white/10 transition-colors cursor-pointer"
               >
                 Enviar otro mensaje
               </button>
             </div>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5 sm:gap-6">
             {/* Form Header */}
-            <div className="border-b border-white/10 pb-6">
-              <div className="flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#C5B49F] font-semibold mb-2">
+            <div className="border-b border-white/10 pb-5 sm:pb-6">
+              <div className="flex items-center gap-2 text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#C5B49F] font-semibold mb-2">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Formulario Directo</span>
               </div>
@@ -187,10 +184,10 @@ export default function ContactForm() {
             )}
 
             {/* Form Inputs Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
               {/* Nombre */}
               <div className="flex flex-col gap-2">
-                <label htmlFor="name" className="text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
+                <label htmlFor="name" className="text-[11px] sm:text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
                   <User className="w-3.5 h-3.5 text-[#C5B49F]" />
                   <span>Nombre Completo *</span>
                 </label>
@@ -202,13 +199,13 @@ export default function ContactForm() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Ej. Roberto Sánchez"
-                  className="w-full px-4 py-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-[#F4F5F1] placeholder-[#8E9B93]/50 focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all"
+                  className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-base sm:text-sm text-[#F4F5F1] placeholder-[#8E9B93]/50 focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all"
                 />
               </div>
 
               {/* Correo Electrónico */}
               <div className="flex flex-col gap-2">
-                <label htmlFor="email" className="text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
+                <label htmlFor="email" className="text-[11px] sm:text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
                   <Mail className="w-3.5 h-3.5 text-[#C5B49F]" />
                   <span>Correo Electrónico *</span>
                 </label>
@@ -220,13 +217,13 @@ export default function ContactForm() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Ej. roberto@empresa.com"
-                  className="w-full px-4 py-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-[#F4F5F1] placeholder-[#8E9B93]/50 focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all"
+                  className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-base sm:text-sm text-[#F4F5F1] placeholder-[#8E9B93]/50 focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all"
                 />
               </div>
 
               {/* Teléfono / WhatsApp */}
               <div className="flex flex-col gap-2">
-                <label htmlFor="phone" className="text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
+                <label htmlFor="phone" className="text-[11px] sm:text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
                   <Phone className="w-3.5 h-3.5 text-[#C5B49F]" />
                   <span>Teléfono o WhatsApp *</span>
                 </label>
@@ -238,13 +235,13 @@ export default function ContactForm() {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="Ej. +52 55 1234 5678"
-                  className="w-full px-4 py-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-[#F4F5F1] placeholder-[#8E9B93]/50 focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all"
+                  className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-base sm:text-sm text-[#F4F5F1] placeholder-[#8E9B93]/50 focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all"
                 />
               </div>
 
               {/* Motivo o Interés */}
               <div className="flex flex-col gap-2">
-                <label htmlFor="subject" className="text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
+                <label htmlFor="subject" className="text-[11px] sm:text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-[#C5B49F]" />
                   <span>Motivo de Interés *</span>
                 </label>
@@ -253,7 +250,7 @@ export default function ContactForm() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3.5 rounded-xl bg-[#0D1210] border border-white/10 text-sm text-[#F4F5F1] focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all cursor-pointer"
+                  className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-[#0D1210] border border-white/10 text-base sm:text-sm text-[#F4F5F1] focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all cursor-pointer"
                 >
                   {SUBJECT_OPTIONS.map((opt) => (
                     <option key={opt} value={opt} className="bg-[#0D1210] text-[#F4F5F1]">
@@ -265,7 +262,7 @@ export default function ContactForm() {
 
               {/* Número de Personas */}
               <div className="flex flex-col gap-2 md:col-span-2">
-                <label htmlFor="guests" className="text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
+                <label htmlFor="guests" className="text-[11px] sm:text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
                   <Users className="w-3.5 h-3.5 text-[#C5B49F]" />
                   <span>Nº de Huéspedes / Asistentes (Opcional)</span>
                 </label>
@@ -276,14 +273,14 @@ export default function ContactForm() {
                   value={formData.guests}
                   onChange={handleChange}
                   placeholder="Ej. 2 personas o evento de 30 personas"
-                  className="w-full px-4 py-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-[#F4F5F1] placeholder-[#8E9B93]/50 focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all"
+                  className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-base sm:text-sm text-[#F4F5F1] placeholder-[#8E9B93]/50 focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all"
                 />
               </div>
             </div>
 
             {/* Mensaje */}
             <div className="flex flex-col gap-2">
-              <label htmlFor="message" className="text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
+              <label htmlFor="message" className="text-[11px] sm:text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
                 <MessageSquare className="w-3.5 h-3.5 text-[#C5B49F]" />
                 <span>Mensaje o Detalles de tu Visita *</span>
               </label>
@@ -291,11 +288,11 @@ export default function ContactForm() {
                 id="message"
                 name="message"
                 required
-                rows={5}
+                rows={4}
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Cuéntanos sobre tu plan: tipo de suite deseada, requerimientos especiales de alimentación, detalles de tu evento o cualquier pregunta que tengas..."
-                className="w-full px-4 py-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-[#F4F5F1] placeholder-[#8E9B93]/50 focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all resize-y"
+                className="w-full px-4 py-3 sm:py-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-base sm:text-sm text-[#F4F5F1] placeholder-[#8E9B93]/50 focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all resize-y min-h-[110px]"
               />
             </div>
 
@@ -309,7 +306,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 className="w-4 h-4 mt-0.5 rounded border-white/20 text-[#C5B49F] bg-white/[0.05] focus:ring-[#C5B49F] cursor-pointer"
               />
-              <label htmlFor="privacyAccepted" className="text-xs text-[#8E9B93] font-light leading-relaxed cursor-pointer">
+              <label htmlFor="privacyAccepted" className="text-xs text-[#8E9B93] font-light leading-relaxed cursor-pointer select-none">
                 Acepto el tratamiento confidencial de mis datos personales para la atención exclusiva de mi consulta y reservación en Orgánico Hotel Boutique.
               </label>
             </div>
@@ -319,7 +316,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full py-4 px-8 rounded-xl bg-[#C5B49F] hover:bg-[#d4c5b2] text-[#0A0D0C] font-semibold text-xs uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center gap-2.5 shadow-xl shadow-[#C5B49F]/10 disabled:opacity-50 disabled:cursor-not-allowed group cursor-pointer"
+                className="w-full py-4 px-6 sm:px-8 rounded-xl bg-[#C5B49F] hover:bg-[#d4c5b2] active:scale-[0.99] text-[#0A0D0C] font-semibold text-xs uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center gap-2.5 shadow-xl shadow-[#C5B49F]/10 disabled:opacity-50 disabled:cursor-not-allowed group cursor-pointer touch-manipulation"
               >
                 {status === 'loading' ? (
                   <>
@@ -336,7 +333,7 @@ export default function ContactForm() {
             </div>
 
             {/* Info badge */}
-            <div className="pt-2 text-center text-[11px] text-[#8E9B93]/70">
+            <div className="pt-1 text-center text-[11px] text-[#8E9B93]/70">
               <span>Respuesta habitual en menos de 2 horas en horario de atención</span>
             </div>
           </form>
