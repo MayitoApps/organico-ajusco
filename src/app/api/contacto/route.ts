@@ -77,7 +77,7 @@ export async function POST(request: Request) {
     );
     const waUrl = waPhone ? `https://wa.me/${waPhone}?text=${waText}` : null;
 
-    const emailSubject = `[Web Orgánico Ajusco] ${cleanSubject} - ${cleanName}`;
+    const emailSubject = `Orgánico Hotel Boutique Ajusco - ${cleanName}`;
 
     // Plantilla HTML de lujo 100% Mobile-First Responsive
     const emailHtml = `
@@ -90,7 +90,7 @@ export async function POST(request: Request) {
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
   <meta name="color-scheme" content="dark only">
   <meta name="supported-color-schemes" content="dark only">
-  <title>Nuevo Mensaje - Orgánico Ajusco</title>
+  <title>Orgánico Hotel Boutique Ajusco - ${cleanName}</title>
   <style>
     :root { color-scheme: dark only; supported-color-schemes: dark only; }
     body {
@@ -108,9 +108,8 @@ export async function POST(request: Request) {
     @media only screen and (max-width: 600px) {
       .email-wrapper { padding: 10px 8px !important; }
       .email-container { max-width: 100% !important; border-radius: 14px !important; }
-      .email-header { padding: 26px 16px 20px !important; }
-      .brand-title { font-size: 20px !important; letter-spacing: 2px !important; }
-      .brand-subtitle { font-size: 11px !important; letter-spacing: 1.5px !important; }
+      .email-header { padding: 22px 16px 18px !important; }
+      .brand-title { font-size: 19px !important; letter-spacing: 1.5px !important; }
       .email-content { padding: 18px 14px 22px !important; }
       .field-card { padding: 12px 14px !important; margin-bottom: 8px !important; }
       .field-value { font-size: 14px !important; }
@@ -130,46 +129,27 @@ export async function POST(request: Request) {
   <div class="email-wrapper" style="width: 100%; background-color: #0A0D0C; padding: 30px 12px; box-sizing: border-box;">
     <div class="email-container" style="max-width: 600px; margin: 0 auto; background-color: #121715; border: 1px solid rgba(197, 180, 159, 0.28); border-radius: 16px; overflow: hidden; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);">
       
-      <!-- Encabezado de Marca -->
-      <div class="email-header" style="background: linear-gradient(180deg, #18201D 0%, #121715 100%); padding: 34px 24px 24px; text-align: center; border-bottom: 1px solid rgba(197, 180, 159, 0.18);">
-        <p style="margin: 0 0 6px 0; font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; color: #C5B49F; font-weight: 600;">
-          Grupo Orgánico · Hoteles Boutique
-        </p>
-        <h1 class="brand-title" style="margin: 0; font-size: 22px; letter-spacing: 2.5px; text-transform: uppercase; color: #F4F5F1; font-weight: 400;">
-          Orgánico Hotel Boutique
+      <!-- Encabezado con Nombre del Hotel -->
+      <div class="email-header" style="background: linear-gradient(180deg, #18201D 0%, #121715 100%); padding: 28px 20px 22px; text-align: center; border-bottom: 1px solid rgba(197, 180, 159, 0.18);">
+        <h1 class="brand-title" style="margin: 0; font-size: 22px; letter-spacing: 2px; text-transform: uppercase; color: #F4F5F1; font-weight: 500;">
+          Orgánico Hotel Boutique Ajusco
         </h1>
-        <p class="brand-subtitle" style="margin: 6px 0 0 0; font-size: 11.5px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93;">
-          San Miguel Ajusco · 3,000 msnm
-        </p>
-        <div style="display: inline-block; background-color: rgba(197, 180, 159, 0.12); border: 1px solid rgba(197, 180, 159, 0.35); border-radius: 999px; padding: 5px 14px; font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: #C5B49F; font-weight: 600; margin-top: 14px;">
-          ★ Nueva Solicitud de Contacto &amp; Experiencias
-        </div>
       </div>
 
-      <!-- Contenido Principal -->
+      <!-- Contenido Principal: Información del Remitente -->
       <div class="email-content" style="padding: 24px 24px 28px;">
         
-        <!-- Ficha 1: Interés / Asunto Destacado -->
+        <!-- Ficha 1: Nombre del Remitente -->
         <div class="field-card" style="background-color: #18221E; border: 1px solid rgba(197, 180, 159, 0.35); border-left: 4px solid #C5B49F; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px;">
           <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #C5B49F; font-weight: 700; margin-bottom: 3px;">
-            Interés o Motivo
-          </div>
-          <div class="field-value" style="font-size: 16px; color: #F4F5F1; font-weight: 600; word-break: break-word;">
-            ${cleanSubject}
-          </div>
-        </div>
-
-        <!-- Ficha 2: Remitente -->
-        <div class="field-card" style="background-color: #151C19; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 13px 16px; margin-bottom: 10px;">
-          <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
             Nombre del Remitente
           </div>
-          <div class="field-value" style="font-size: 15px; color: #F4F5F1; font-weight: 500; word-break: break-word;">
+          <div class="field-value" style="font-size: 16px; color: #F4F5F1; font-weight: 600; word-break: break-word;">
             ${cleanName}
           </div>
         </div>
 
-        <!-- Ficha 3: Correo Electrónico -->
+        <!-- Ficha 2: Correo Electrónico -->
         <div class="field-card" style="background-color: #151C19; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 13px 16px; margin-bottom: 10px;">
           <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
             Correo Electrónico
@@ -181,7 +161,7 @@ export async function POST(request: Request) {
           </div>
         </div>
 
-        <!-- Ficha 4: Teléfono / WhatsApp -->
+        <!-- Ficha 3: Teléfono / WhatsApp -->
         <div class="field-card" style="background-color: #151C19; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 13px 16px; margin-bottom: 10px;">
           <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
             Teléfono de Contacto
@@ -195,6 +175,16 @@ export async function POST(request: Request) {
                 ? '<span style="display: inline-block; margin-left: 8px; font-size: 11px; color: #25D366; font-weight: 600;">(WhatsApp Disponible)</span>'
                 : ''
             }
+          </div>
+        </div>
+
+        <!-- Ficha 4: Interés o Motivo -->
+        <div class="field-card" style="background-color: #151C19; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 13px 16px; margin-bottom: 10px;">
+          <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
+            Interés o Motivo
+          </div>
+          <div class="field-value" style="font-size: 15px; color: #F4F5F1; font-weight: 500; word-break: break-word;">
+            ${cleanSubject}
           </div>
         </div>
 
@@ -241,7 +231,7 @@ export async function POST(request: Request) {
           <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td align="center" style="padding-bottom: 10px;">
-                <a href="mailto:${cleanEmail}?subject=Re:%20${encodeURIComponent(cleanSubject)}%20-%20Org%C3%A1nico%20Hotel%20Boutique%20Ajusco" class="cta-btn" style="display: block; width: 100%; box-sizing: border-box; background-color: #C5B49F; color: #0A0D0C; text-decoration: none; font-size: 12.5px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; padding: 14px 20px; border-radius: 8px; text-align: center;">
+                <a href="mailto:${cleanEmail}?subject=Re:%20[Org%C3%A1nico%20Ajusco]%20${encodeURIComponent(cleanSubject)}" class="cta-btn" style="display: block; width: 100%; box-sizing: border-box; background-color: #C5B49F; color: #0A0D0C; text-decoration: none; font-size: 12.5px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; padding: 14px 20px; border-radius: 8px; text-align: center;">
                   ✉ Responder Directo a ${cleanName}
                 </a>
               </td>
@@ -343,7 +333,7 @@ export async function POST(request: Request) {
 
       try {
         await transporter.sendMail({
-          from: `"Web Orgánico Ajusco" <${smtpUser.trim()}>`,
+          from: `"Orgánico Hotel Boutique Ajusco" <${smtpUser.trim()}>`,
           to: recipient,
           replyTo: cleanEmail,
           subject: emailSubject,
