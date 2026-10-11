@@ -8,9 +8,8 @@ import {
   Loader2, 
   User, 
   Mail, 
-  Phone, 
-  Calendar, 
-  Users, 
+  Phone,
+Users, 
   MessageSquare, 
   Sparkles,
   ArrowRight
@@ -23,7 +22,7 @@ interface FormState {
   email: string;
   phone: string;
   subject: string;
-  date: string;
+  date?: string;
   guests: string;
   message: string;
   privacyAccepted: boolean;
@@ -264,24 +263,8 @@ export default function ContactForm() {
                 </select>
               </div>
 
-              {/* Fecha Tentativa */}
-              <div className="flex flex-col gap-2">
-                <label htmlFor="date" className="text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-[#C5B49F]" />
-                  <span>Fecha Tentativa (Opcional)</span>
-                </label>
-                <input
-                  type="date"
-                  id="date"
-                  name="date"
-                  value={formData.date}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-[#F4F5F1] focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all"
-                />
-              </div>
-
               {/* Número de Personas */}
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 md:col-span-2">
                 <label htmlFor="guests" className="text-xs uppercase tracking-[0.15em] text-[#8E9B93] font-medium flex items-center gap-1.5">
                   <Users className="w-3.5 h-3.5 text-[#C5B49F]" />
                   <span>Nº de Huéspedes / Asistentes (Opcional)</span>
@@ -292,7 +275,7 @@ export default function ContactForm() {
                   name="guests"
                   value={formData.guests}
                   onChange={handleChange}
-                  placeholder="Ej. 2 personas o 45 asistentes"
+                  placeholder="Ej. 2 personas o evento de 30 personas"
                   className="w-full px-4 py-3.5 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-[#F4F5F1] placeholder-[#8E9B93]/50 focus:outline-none focus:border-[#C5B49F] focus:ring-1 focus:ring-[#C5B49F] transition-all"
                 />
               </div>

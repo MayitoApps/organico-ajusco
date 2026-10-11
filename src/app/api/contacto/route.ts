@@ -188,30 +188,16 @@ export async function POST(request: Request) {
           </div>
         </div>
 
-        <!-- Ficha 5: Fecha Estimada & Huéspedes -->
+        <!-- Ficha 5: Huéspedes / Personas -->
         ${
-          cleanDate !== 'No especificada' || cleanGuests !== 'No especificado'
+          cleanGuests && cleanGuests !== 'No especificado'
             ? `<div class="field-card" style="background-color: #151C19; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 13px 16px; margin-bottom: 12px;">
-                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="padding: 0 6px 0 0; vertical-align: top; width: 50%;">
-                      <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
-                        Fecha Estimada
-                      </div>
-                      <div class="field-value" style="font-size: 14px; color: #F4F5F1; font-weight: 500;">
-                        ${cleanDate}
-                      </div>
-                    </td>
-                    <td style="padding: 0 0 0 6px; vertical-align: top; width: 50%;">
-                      <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
-                        Huéspedes / Personas
-                      </div>
-                      <div class="field-value" style="font-size: 14px; color: #F4F5F1; font-weight: 500;">
-                        ${cleanGuests}
-                      </div>
-                    </td>
-                  </tr>
-                </table>
+                <div style="font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #8E9B93; font-weight: 600; margin-bottom: 3px;">
+                  Huéspedes / Personas
+                </div>
+                <div class="field-value" style="font-size: 14px; color: #F4F5F1; font-weight: 500;">
+                  ${cleanGuests}
+                </div>
               </div>`
             : ''
         }
