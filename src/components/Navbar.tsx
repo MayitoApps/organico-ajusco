@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
-import { HOTEL_INFO, createWhatsAppUrl } from '@/data/hotelData';
+import { HOTEL_INFO } from '@/data/hotelData';
 
 const NAV_LINKS = [
   { name: 'Inicio', href: '/' },
@@ -87,7 +87,7 @@ export default function Navbar() {
           {/* Right Column: Symmetrical Balancer with subtle Reservar CTA on Desktop & Mobile Hamburger */}
           <div className="flex-1 flex items-center justify-end gap-3 sm:gap-4">
             <a
-              href={createWhatsAppUrl("Hola Orgánico Ajusco, me gustaría consultar disponibilidad para reservar una estancia.")}
+              href={HOTEL_INFO.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-[#C5B49F]/30 bg-[#C5B49F]/10 hover:bg-[#C5B49F] text-[#F4F5F1] hover:text-[#0A0D0C] text-[10.5px] uppercase tracking-[0.16em] font-medium transition-all duration-300 shadow-sm hover:shadow-[0_4px_16px_rgba(197,180,159,0.25)]"
@@ -136,8 +136,18 @@ export default function Navbar() {
           </nav>
         </div>
 
-        {/* Mobile Drawer Footer with external links */}
+        {/* Mobile Drawer Footer with external links & Reservar CTA */}
         <div className="pt-8 border-t border-white/10 flex flex-col gap-4">
+          <a
+            href={HOTEL_INFO.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-[#C5B49F]/40 bg-[#C5B49F] text-[#0A0D0C] text-[11px] uppercase tracking-[0.18em] font-semibold transition-all duration-300 shadow-[0_4px_16px_rgba(197,180,159,0.3)] active:scale-[0.98]"
+          >
+            <span>Reservar</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
+
           <div className="grid grid-cols-2 gap-3 pt-2 text-[11px] text-[#8E9B93]">
             <a
               href={HOTEL_INFO.links.spa}

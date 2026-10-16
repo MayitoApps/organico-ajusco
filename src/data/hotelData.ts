@@ -84,7 +84,9 @@ export const HOTEL_INFO = {
     facebook: "https://www.facebook.com/OrganicoHotelBoutique/",
     instagram: "https://www.instagram.com/organicohotelboutique/?hl=en"
   },
+  bookingUrl: "https://booking.easy-rez.com/organico-hotel-boutique/es/home",
   links: {
+    booking: "https://booking.easy-rez.com/organico-hotel-boutique/es/home",
     spa: "https://www.origencentroholisticoyspa.com/",
     spaName: "Origen Centro Holístico y Spa",
     group: "https://www.gohb.com.mx/",
