@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import { Metadata } from 'next';
-import { Check, Flame, Users, ConciergeBell, Bed, Sparkles, ShieldCheck } from 'lucide-react';
+import { Check, Flame, Users, ConciergeBell, Bed, Sparkles, ShieldCheck, ArrowUpRight } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import { SUITES_DATA } from '@/data/hotelData';
+import { HOTEL_INFO, SUITES_DATA } from '@/data/hotelData';
 
 export const metadata: Metadata = {
   title: "Suites de Lujo en el Bosque",
@@ -201,15 +201,17 @@ export default function SuitesPage() {
                       </div>
                     </div>
 
-                    <WhatsAppButton
-                      message={suite.whatsappMessage}
-                      label={`Reservar ${suite.name}`}
-                      variant="primary"
-                      size="md"
-                      className="w-full shadow-xl"
-                    />
+                    <a
+                      href={HOTEL_INFO.bookingUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-[#0A0D0C] bg-[#C5B49F] hover:bg-[#D8C7B3] hover:shadow-lg hover:shadow-[#C5B49F]/20 active:scale-[0.98] transition-all duration-300 shadow-xl"
+                    >
+                      <span>Reservar {suite.name}</span>
+                      <ArrowUpRight className="w-4 h-4 shrink-0" />
+                    </a>
                     <p className="text-[11px] text-[#8E9B93] italic text-center sm:text-left">
-                      Tarifa en moneda nacional (MXN). Reserva directa inmediata con confirmación personalizada.
+                      Tarifa en moneda nacional (MXN). Reserva directa inmediata en nuestro motor Easy-Rez.
                     </p>
                   </div>
                 </div>

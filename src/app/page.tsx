@@ -8,10 +8,6 @@ import LuxuryVideoPlayer from '@/components/LuxuryVideoPlayer';
 import HomeFAQ from '@/components/HomeFAQ';
 
 export default function HomePage() {
-  const heroWa = createWhatsAppUrl(
-    "Hola Orgánico Ajusco, me gustaría consultar disponibilidad para una estancia en la montaña."
-  );
-
   return (
     <div className="relative w-full overflow-hidden">
       {/* 1. HERO SECTION */}
@@ -55,13 +51,15 @@ export default function HomePage() {
 
           {/* Direct Actions */}
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full sm:w-auto reveal">
-            <WhatsAppButton
-              message="Hola Orgánico Ajusco, me gustaría cotizar una estancia en la montaña."
-              label="Reservar por WhatsApp"
-              variant="primary"
-              size="lg"
-              className="w-full sm:w-auto shadow-2xl"
-            />
+            <a
+              href={HOTEL_INFO.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-xs font-semibold sm:text-sm uppercase tracking-wider text-[#0A0D0C] bg-[#C5B49F] hover:bg-[#D8C7B3] hover:shadow-lg hover:shadow-[#C5B49F]/20 active:scale-[0.98] transition-all duration-300 shadow-2xl"
+            >
+              <span>Reservar</span>
+              <ArrowUpRight className="w-4 h-4 shrink-0" />
+            </a>
             <Link
               href="/suites"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-xs sm:text-sm font-medium uppercase tracking-wider text-[#F4F5F1] bg-white/[0.05] hover:bg-white/[0.1] border border-white/15 backdrop-blur-md transition-all duration-300"
@@ -293,13 +291,15 @@ export default function HomePage() {
                     <span className="text-[11px] uppercase tracking-wider text-[#8E9B93]">Tarifa / noche</span>
                     <span className="text-base font-light text-[#C5B49F]">{suite.price}</span>
                   </div>
-                  <WhatsAppButton
-                    message={suite.whatsappMessage}
-                    label="Reservar Suite"
-                    variant="primary"
-                    size="sm"
-                    className="w-full text-xs"
-                  />
+                  <a
+                    href={HOTEL_INFO.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-[11px] font-semibold tracking-wider uppercase text-[#0A0D0C] bg-[#C5B49F] hover:bg-[#D8C7B3] hover:shadow-md hover:shadow-[#C5B49F]/20 active:scale-[0.98] transition-all duration-300"
+                  >
+                    <span>Reservar</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
                 </div>
               </div>
             ))}
