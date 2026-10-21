@@ -85,6 +85,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="hover:text-[#C5B49F] transition-colors">
+                  Blog de Montaña
+                </Link>
+              </li>
+              <li>
                 <Link href="/contacto" className="text-[#C5B49F] hover:text-[#d6c7b4] font-medium transition-colors">
                   Contacto & Reservaciones
                 </Link>
