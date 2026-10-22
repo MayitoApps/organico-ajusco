@@ -108,7 +108,7 @@ export const SUITES_DATA: SuiteItem[] = [
     name: "Mini Suite",
     subtitle: "Intimidad, calidez y reconexión en el corazón del bosque",
     shortDesc: "Diseñada para escapadas románticas o retiros individuales. Acogedora, silenciosa y rodeada de pinos centenarios.",
-    description: "Nuestra Mini Suite es el refugio esencial para quienes buscan desconectarse del ritmo citadino. Cuenta con opción de chimenea de leña tradicional (sujeta a disponibilidad), cama Queen Size de máximo confort, baño privado con regadera de lluvia y ventanales con vista directa a los senderos verdes del Ajusco.",
+    description: "Nuestra Mini Suite es el refugio esencial para quienes buscan desconectarse del ritmo citadino. Cuenta con cama Queen Size de máximo confort, calefacción, baño privado con regadera de lluvia y ventanales con vista directa a los senderos verdes del Ajusco.",
     capacity: "Máximo 2 personas",
     size: "35 m²",
     bed: "1 Cama Queen Size",
@@ -120,7 +120,6 @@ export const SUITES_DATA: SuiteItem[] = [
       "Baño con secadora de pelo",
       "Caja de seguridad",
       "Sala de estar",
-      "Chimenea (bajo disponibilidad)",
       "Terraza privada",
       "TV 32” & WiFi",
       "Incluye desayuno continental"
@@ -139,7 +138,7 @@ export const SUITES_DATA: SuiteItem[] = [
     subtitle: "Confort alpino y terrazas abiertas a la inmensidad del bosque",
     shortDesc: "Equilibrio puro entre piedra volcánica y madera noble, con terraza privada para contemplar los atardeceres de montaña.",
     description: "Una suite espaciosa y luminosa concebida para el disfrute en pareja. Dispone de chimenea de tiro alto (sujeta a disponibilidad), amplia terraza exterior con sala campestre, cama King Size de máxima comodidad y un diseño arquitectónico que fusiona calidez y sofisticación alpina.",
-    capacity: "Máximo 3 personas",
+    capacity: "Máximo 2 personas",
     size: "48 m²",
     bed: "1 Cama King Size",
     price: "$3,500.00 MXN",
@@ -190,8 +189,7 @@ export const SUITES_DATA: SuiteItem[] = [
     images: [
       "/images/suites/premium-suite-1.webp",
       "/images/suites/premium-suite-2.webp",
-      "/images/suites/premium-suite-3.webp",
-      "/images/suites/premium-suite-bano.webp"
+      "/images/suites/premium-suite-3.webp"
     ],
     whatsappMessage: "Hola Orgánico Ajusco, me interesa conocer fechas disponibles para la Premium Suite ($4,500 MXN)."
   },
@@ -201,7 +199,7 @@ export const SUITES_DATA: SuiteItem[] = [
     subtitle: "La cúspide de Orgánico: dos niveles de arquitectura y vistas 360°",
     shortDesc: "Nuestra suite más exclusiva y emblemática. Arquitectura en dos pisos, chimenea colosal (sujeta a disponibilidad) y la máxima privacidad.",
     description: "Construida como una oda a la montaña, la Master Suite impresiona por sus techos a doble altura revestidos de maderas curadas. Distribuida en dos niveles con recámara principal panorámica en la planta alta, sala de estar monumental, comedor privado y terraza de 360 grados frente a la sierra del Ajusco.",
-    capacity: "Máximo 2 personas",
+    capacity: "Máximo 3 personas",
     size: "92 m²",
     bed: "1 Cama King Size",
     price: "$5,500.00 MXN",
@@ -331,12 +329,11 @@ export const EXPERIENCIAS_DATA: ExperienceItem[] = [
     categoryLabel: "Momentos Íntimos",
     name: "Pedidas de Mano Mágicas",
     subtitle: "El escenario perfecto para una promesa para toda la vida",
-    description: "Diseñamos la atmósfera perfecta en nuestros jardines o terrazas con vistas a la sierra: montaje monumental, letras luminosas 'Marry Me', camino de velas, pirotecnia fría, champaña de celebración y cena privada.",
+    description: "Diseñamos la atmósfera perfecta en nuestros jardines o terrazas con vistas a la sierra: montaje monumental, letras luminosas 'Marry Me', camino de velas, pirotecnia fría y cena privada.",
     includes: [
       "Coordinación personalizada y montaje escenográfico",
       "Letras gigantes o arco floral decorativo",
-      "Camino de antorchas y velas aromáticas",
-      "Botella de champaña para el brindis",
+      "Camino de velas aromáticas",
       "Cena romántica de celebración en 4 tiempos"
     ],
     featuredImage: "/images/experiencias/pedida-mano-card.webp",

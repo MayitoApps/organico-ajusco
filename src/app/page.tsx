@@ -225,7 +225,7 @@ export default function HomePage() {
                 Nuestras Suites
               </h2>
               <p className="text-xs text-[#8E9B93] mt-2 font-light">
-                * Nota: No todas las suites cuentan con chimenea; la chimenea es bajo disponibilidad al reservar.
+                * Nota: Las suites Mini no cuentan con chimenea. En las demás categorías, la chimenea es bajo disponibilidad al reservar.
               </p>
             </div>
             <Link
@@ -270,10 +270,17 @@ export default function HomePage() {
                         {suite.capacity}
                       </span>
                       <span>·</span>
-                      <span className="flex items-center gap-1">
-                        <Flame className="w-3.5 h-3.5 text-[#C5B49F]" />
-                        Chimenea bajo disp.
-                      </span>
+                      {suite.amenities.some((a) => a.toLowerCase().includes('chimenea')) ? (
+                        <span className="flex items-center gap-1">
+                          <Flame className="w-3.5 h-3.5 text-[#C5B49F]" />
+                          Chimenea bajo disp.
+                        </span>
+                      ) : (
+                        <span className="flex items-center gap-1">
+                          <Sparkles className="w-3.5 h-3.5 text-[#C5B49F]" />
+                          Calefacción
+                        </span>
+                      )}
                     </div>
 
                     <h3 className="text-xl font-normal text-[#F4F5F1] group-hover:text-[#C5B49F] transition-colors">

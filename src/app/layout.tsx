@@ -196,7 +196,7 @@ const jsonLd = {
           "name": "¿Todas las suites cuentan con chimenea de leña funcional?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No todas las suites cuentan con chimenea, su asignación es bajo disponibilidad al momento de reservar. Las suites asignadas con chimenea incluyen dotación inicial de leña, encendido asistido por nuestro personal y servicio a la habitación."
+            "text": "Las habitaciones Mini Suite no cuentan con chimenea. En las categorías Standard, Premium y Master, su asignación es bajo disponibilidad al momento de reservar. Las suites asignadas con chimenea incluyen dotación inicial de leña, encendido asistido por nuestro personal y servicio a la habitación."
           }
         },
         {

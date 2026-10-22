@@ -118,7 +118,7 @@ export const BLOG_POSTS: BlogPost[] = [
         {
           heading: '2. Detalles que se quedan grabados en la memoria',
           body: [
-            'Nos encanta cuando alguien nos pide ser cómplices de una sorpresa. Puede ser desde una cena íntima con un caminito de antorchas y velas parpadeando entre los pinos, hasta una fogatita privada donde les llevamos malvaviscos, chocolate caliente y copas para brindar.',
+            'Nos encanta cuando alguien nos pide ser cómplices de una sorpresa. Puede ser desde una cena íntima con un caminito de velas parpadeando entre los pinos, hasta una fogatita privada donde les llevamos malvaviscos, chocolate caliente y copas para brindar.',
             'Aquí no hay prisas. Si quieren quedarse tres horas platicando alrededor del fuego después de cenar, el bosque es todo suyo.',
           ],
           imageGrid: [

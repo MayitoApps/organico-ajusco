@@ -60,7 +60,7 @@ export default function SuitesPage() {
                 Información importante sobre chimeneas
               </h5>
               <p className="text-xs text-[#8E9B93] font-light mt-1">
-                No todas las suites cuentan con chimenea; la asignación de suite con chimenea está sujeta a disponibilidad al momento de reservar. Te sugerimos confirmar tu solicitud directamente con nuestro concierge vía WhatsApp.
+                Las habitaciones Mini Suite no cuentan con chimenea. En las categorías Standard, Premium y Master, la asignación de chimenea está sujeta a disponibilidad al momento de reservar. Te sugerimos confirmar tu solicitud directamente con nuestro concierge vía WhatsApp.
               </p>
             </div>
           </div>
@@ -231,7 +231,7 @@ export default function SuitesPage() {
             Tu estancia a 3,000 metros sobre el nivel del mar
           </h3>
           <p className="text-xs sm:text-sm text-[#8E9B93] leading-relaxed">
-            Las noches en el Ajusco son frías y despejadas. Nuestras suites cuentan con calefacción y chimenea sujeta a disponibilidad previa (con dotación de leña incluida en suites asignadas). Te sugerimos traer calzado cómodo para bosque y abrigo abrigador para disfrutar de las terrazas al atardecer.
+            Las noches en el Ajusco son frías y despejadas. Nuestras suites cuentan con calefacción y opción de chimenea según categoría sujeta a disponibilidad previa (con dotación de leña incluida en suites asignadas; no disponible en Mini Suite). Te sugerimos traer calzado cómodo para bosque y abrigo abrigador para disfrutar de las terrazas al atardecer.
           </p>
           <div className="pt-2">
             <WhatsAppButton

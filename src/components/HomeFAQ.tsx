@@ -16,7 +16,7 @@ export const FAQS_DATA: FAQItem[] = [
   },
   {
     question: "¿Todas las suites cuentan con chimenea de leña funcional?",
-    answer: "No todas las suites cuentan con chimenea, su asignación es bajo disponibilidad al momento de hacer la reservación. En las suites asignadas con chimenea se incluye dotación inicial de leña, encendido asistido por nuestro personal y servicio a la habitación (room service)."
+    answer: "Las habitaciones Mini Suite no cuentan con chimenea. En las categorías Standard, Premium y Master, su asignación es bajo disponibilidad al momento de hacer la reservación. En las suites asignadas con chimenea se incluye dotación inicial de leña, encendido asistido por nuestro personal y servicio a la habitación (room service)."
   },
   {
     question: "¿El restaurante Don Petro y el Bar Miel Sobre Limón están abiertos al público en general?",

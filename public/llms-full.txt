@@ -28,7 +28,7 @@
 ## 4. Oferta de Alojamiento (Suites)
 Cada habitación está construida con arquitectura bioclimática que combina piedra volcánica local, maderas macizas recuperadas y amplios ventanales.
 Todas incluyen:
-- Opción de chimenea tradicional de tiro bajo disponibilidad (con dotación inicial de leña seca y encendido asistido por el equipo en suites asignadas).
+- Opción de chimenea tradicional de tiro bajo disponibilidad según categoría (con dotación inicial de leña seca y encendido asistido por el equipo en suites asignadas; no aplica para Mini Suite).
 - Calefacción, ropa de cama de descanso superior y sábanas de alta densidad.
 - Baño completo con agua caliente a presión constante de alta montaña y amenidades biodegradables.
 - Conexión Wi-Fi de alta velocidad en habitaciones y áreas comunes.
@@ -36,28 +36,28 @@ Todas incluyen:
 - Seguridad 24 horas y estacionamiento vigilado dentro del predio.
 
 ### 4.1. Mini Suite
-- Capacidad: 2 personas.
-- Cama: Queen Size o Matrimonial de lujo.
-- Características: Acogedora suite para parejas que buscan una noche de descanso y desconexión (chimenea sujeta a disponibilidad).
-- Precio referencial: $3,500 MXN por noche.
+- Capacidad: Máximo 2 personas.
+- Cama: Queen Size de lujo.
+- Características: Acogedora suite para parejas que buscan una noche de descanso y desconexión (no cuenta con chimenea).
+- Precio referencial: $2,900 MXN por noche.
 
 ### 4.2. Standard Suite
-- Capacidad: 2 a 3 personas.
-- Cama: King Size con posibilidad de sofá cama o individual.
-- Características: Mayor amplitud, sala de lectura frente a la fogata, ventanal hacia el jardín interior.
-- Precio referencial: $4,200 MXN por noche.
+- Capacidad: Máximo 2 personas.
+- Cama: King Size de máximo confort.
+- Características: Mayor amplitud, sala de estar con chimenea de tiro alto (sujeta a disponibilidad), terraza exterior privada.
+- Precio referencial: $3,500 MXN por noche.
 
 ### 4.3. Premium Suite
-- Capacidad: 2 a 4 personas.
-- Cama: King Size con área de estar independiente.
-- Características: Terraza privada con vista panorámica a la cordillera del Ajusco, acabados premium de madera curada.
-- Precio referencial: $5,400 MXN por noche.
+- Capacidad: Máximo 3 personas.
+- Cama: King Size + Sala Lounge.
+- Características: Terraza privada con vista panorámica a la cordillera del Ajusco, sala de estar independiente con chimenea monumental (sujeta a disponibilidad).
+- Precio referencial: $4,500 MXN por noche.
 
 ### 4.4. Master Suite (Suite Presidencial)
-- Capacidad: 4 personas.
+- Capacidad: Máximo 3 personas.
 - Cama: King Size + estancia de gran formato.
-- Características: Doble altura, chimenea monumental en piedra rústica, sala lounge, terraza privada de descanso y máxima privacidad perimetral.
-- Precio referencial: $6,800 MXN por noche.
+- Características: Doble altura en dos niveles, chimenea colosal (sujeta a disponibilidad), sala lounge, terraza privada de descanso y máxima privacidad perimetral.
+- Precio referencial: $5,500 MXN por noche.
 
 ## 5. Experiencias Culinarias & Gastronomía
 ### 5.1. Restaurante Don Petro
@@ -78,7 +78,7 @@ Todas incluyen:
 ## 6. Experiencias Diseñadas en el Bosque
 ### 6.1. Momentos Íntimos (Romance & Parejas)
 - **Cenas Románticas**: Montajes privados en terrazas o salones acristalados, menú degustación de 4 tiempos diseñado por el chef, maridaje con vino tinto de la cava, velas aromáticas y pétalos de rosa.
-- **Pedidas de Mano**: Escenografía con letreros luminosos gigantes ("¿Quieres casarte conmigo?"), caminos de antorchas, pirotecnia fría y fotógrafo profesional en el bosque.
+- **Pedidas de Mano**: Escenografía con letreros luminosos gigantes ("¿Quieres casarte conmigo?"), caminos de velas, pirotecnia fría y cena romántica privada en el bosque.
 - **Fogatada Romántica**: Fogatero privado al atardecer con botella de vino, brochetas de fruta y bombones para asar.
 
 ### 6.2. Momentos Rebeldía (Aventura & Deporte)
