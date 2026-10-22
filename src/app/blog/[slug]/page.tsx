@@ -25,7 +25,6 @@ import {
   getBlogPostBySlug, 
   getRelatedBlogPosts 
 } from '@/data/blogData';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 import { HOTEL_INFO } from '@/data/hotelData';
 
@@ -376,14 +375,6 @@ export default async function BlogPostPage({ params }: PageProps) {
                     <span>{post.inboundCta.buttonText}</span>
                     <ArrowUpRight className="w-4 h-4" />
                   </Link>
-
-                  <WhatsAppButton
-                    message={post.inboundCta.whatsappText}
-                    label="Platicar por WhatsApp"
-                    variant="outline"
-                    size="md"
-                    className="w-full sm:w-auto"
-                  />
                 </div>
               </div>
             </div>
@@ -460,14 +451,6 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <span>Reservar Suite</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
-
-                <WhatsAppButton
-                  message="Hola Orgánico Ajusco, leí un artículo en su blog y me gustaría planear una visita a la montaña."
-                  label="Escribir por WhatsApp"
-                  variant="outline"
-                  size="sm"
-                  className="w-full"
-                />
               </div>
             </div>
 
