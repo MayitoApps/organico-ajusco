@@ -18,7 +18,6 @@ interface NavLinkItem {
 }
 
 const NAV_LINKS: NavLinkItem[] = [
-  { name: 'Inicio', href: '/' },
   { name: 'Suites', href: '/suites' },
   { name: 'Gastronomía', href: '/gastronomia' },
   { name: 'Experiencias', href: '/experiencias' },

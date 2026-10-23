@@ -141,8 +141,8 @@ export const SUITES_DATA: SuiteItem[] = [
     capacity: "Máximo 2 personas",
     size: "48 m²",
     bed: "1 Cama King Size",
-    price: "$3,500.00 MXN",
-    priceNumber: 3500,
+    price: "$4,060.00 MXN",
+    priceNumber: 4060,
     amenities: [
       "Calefacción",
       "Amenidades",
@@ -161,7 +161,7 @@ export const SUITES_DATA: SuiteItem[] = [
       "/images/suites/standard-suite-3.webp",
       "/images/suites/standard-suite-bano.webp"
     ],
-    whatsappMessage: "Hola Orgánico Ajusco, deseo información y cotización para reservar la Standard Suite ($3,500 MXN)."
+    whatsappMessage: "Hola Orgánico Ajusco, deseo información y cotización para reservar la Standard Suite ($4,060 MXN)."
   },
   {
     id: "premium-suite",
@@ -172,8 +172,8 @@ export const SUITES_DATA: SuiteItem[] = [
     capacity: "Máximo 3 personas",
     size: "65 m²",
     bed: "1 Cama King Size + Sala Lounge",
-    price: "$4,500.00 MXN",
-    priceNumber: 4500,
+    price: "$5,220.00 MXN",
+    priceNumber: 5220,
     amenities: [
       "Calefacción",
       "Amenidades",
@@ -191,7 +191,7 @@ export const SUITES_DATA: SuiteItem[] = [
       "/images/suites/premium-suite-2.webp",
       "/images/suites/premium-suite-3.webp"
     ],
-    whatsappMessage: "Hola Orgánico Ajusco, me interesa conocer fechas disponibles para la Premium Suite ($4,500 MXN)."
+    whatsappMessage: "Hola Orgánico Ajusco, me interesa conocer fechas disponibles para la Premium Suite ($5,220 MXN)."
   },
   {
     id: "master-suite",
@@ -202,8 +202,8 @@ export const SUITES_DATA: SuiteItem[] = [
     capacity: "Máximo 3 personas",
     size: "92 m²",
     bed: "1 Cama King Size",
-    price: "$5,500.00 MXN",
-    priceNumber: 5500,
+    price: "$6,380.00 MXN",
+    priceNumber: 6380,
     amenities: [
       "Botella de vino de Bienvenida",
       "Cama King size",
@@ -224,7 +224,7 @@ export const SUITES_DATA: SuiteItem[] = [
       "/images/suites/master-suite-3.webp",
       "/images/suites/master-suite-4.webp"
     ],
-    whatsappMessage: "Hola Orgánico Ajusco, me gustaría cotizar una estancia exclusiva en la Master Suite ($5,500 MXN)."
+    whatsappMessage: "Hola Orgánico Ajusco, me gustaría cotizar una estancia exclusiva en la Master Suite ($6,380 MXN)."
   }
 ];
 
